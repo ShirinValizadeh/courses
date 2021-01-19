@@ -1,0 +1,806 @@
+Started GET "/" for ::1 at 2021-01-19 12:29:48 +0100
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shirin/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shirin/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 11.1ms | Allocations: 523)
+Completed 200 OK in 32ms (Views: 17.4ms | ActiveRecord: 0.0ms | Allocations: 4179)
+
+
+Started GET "/" for ::1 at 2021-01-19 13:28:31 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/shirin/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/shirin/.rbenv/versions/3.0.0/lib/ruby/gems/3.0.0/gems/railties-6.1.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 8.6ms | Allocations: 419)
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 0.0ms | Allocations: 3076)
+
+
+Started GET "/" for ::1 at 2021-01-19 13:44:57 +0100
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 291)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/shirin/rails_Curses/curses/public/packs
+[Webpacker] Hash: 415a948d492e21802f43
+Version: webpack 4.46.0
+Time: 1942ms
+Built at: 2021-01-19 13:45:01
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-d5a3c3b4dce84b5eb605.js    125 KiB  application  [emitted] [immutable]  application
+js/application-d5a3c3b4dce84b5eb605.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-d5a3c3b4dce84b5eb605.js js/application-d5a3c3b4dce84b5eb605.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 3529.9ms | Allocations: 14287)
+Completed 200 OK in 3544ms (Views: 3533.9ms | ActiveRecord: 0.0ms | Allocations: 17351)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:05:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 3182)
+Completed 200 OK in 13ms (Views: 11.7ms | Allocations: 4420)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:05:20 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 2869)
+Completed 200 OK in 24ms (Views: 21.6ms | Allocations: 3309)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:18:39 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.7ms | Allocations: 5449)
+Completed 200 OK in 57ms (Views: 53.3ms | Allocations: 6677)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:18:58 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3199)
+Completed 200 OK in 37ms (Views: 33.5ms | Allocations: 4401)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:20:25 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.7ms | Allocations: 3206)
+Completed 200 OK in 28ms (Views: 24.9ms | Allocations: 4414)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:26:57 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.2ms | Allocations: 146)
+  Rendered layout layouts/application.html.erb (Duration: 26.4ms | Allocations: 3586)
+Completed 200 OK in 36ms (Views: 32.0ms | Allocations: 4793)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:27:59 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.3ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 3556)
+Completed 200 OK in 34ms (Views: 30.7ms | Allocations: 4763)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:28:33 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 23.7ms | Allocations: 3593)
+Completed 200 OK in 28ms (Views: 25.4ms | Allocations: 4040)
+
+
+Started GET "/" for ::1 at 2021-01-19 14:29:06 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 138)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3549)
+Completed 200 OK in 30ms (Views: 27.0ms | Allocations: 4751)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:46:24 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 139)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 3548)
+Completed 200 OK in 15ms (Views: 13.0ms | Allocations: 4748)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:46:41 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3549)
+Completed 200 OK in 22ms (Views: 19.1ms | Allocations: 4749)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:46:42 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 2966)
+Completed 200 OK in 21ms (Views: 19.2ms | Allocations: 3405)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:47:03 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 140)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3549)
+Completed 200 OK in 18ms (Views: 15.0ms | Allocations: 4748)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:47:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 12.5ms | Allocations: 2966)
+Completed 200 OK in 16ms (Views: 14.1ms | Allocations: 3405)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:48:06 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2968)
+Completed 200 OK in 6ms (Views: 5.9ms | Allocations: 3413)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:48:08 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 2974)
+Completed 200 OK in 8ms (Views: 7.1ms | Allocations: 3417)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:48:09 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.1ms | Allocations: 39)
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 2974)
+Completed 200 OK in 10ms (Views: 8.8ms | Allocations: 3417)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:50:04 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 126)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3547)
+Completed 200 OK in 19ms (Views: 16.3ms | Allocations: 4753)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:53:16 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.2ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 17.1ms | Allocations: 3501)
+  Rendered layout layouts/application.html.erb (Duration: 31.2ms | Allocations: 6907)
+Completed 500 Internal Server Error in 41ms (Allocations: 8092)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+  <%= link_to 'Home' , root_path , class :'navbar-brand' %>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+   
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+   
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+2:      <div class="container-fluid">
+3:      <%= link_to 'Home' , root_path , class :'navbar-brand' %>
+4:       
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:       
+11:            <li class="nav-item">
+12:              <a class="nav-link" href="#">Link</a>
+13:            </li>
+14:    
+15:       
+16:          </ul>
+17:          <form class="d-flex">
+18:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+19:            <button class="btn btn-outline-success" type="submit">Search</button>
+20:          </form>
+21:        </div>
+22:      </div>
+23:    </nav>
+  
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2021-01-19 15:53:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.4ms | Allocations: 1088)
+  Rendered layout layouts/application.html.erb (Duration: 12.6ms | Allocations: 4022)
+Completed 500 Internal Server Error in 16ms (Allocations: 4427)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+  <div class="container-fluid">
+  <%= link_to 'Home' , root_path , class :'navbar-brand' %>
+   
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+   
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+
+   
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+):
+1:    <nav class="navbar navbar-expand-lg navbar-light " style="background-color: #e3f2fd;">
+2:      <div class="container-fluid">
+3:      <%= link_to 'Home' , root_path , class :'navbar-brand' %>
+4:       
+5:        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+6:          <span class="navbar-toggler-icon"></span>
+7:        </button>
+8:        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+9:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+10:       
+11:            <li class="nav-item">
+12:              <a class="nav-link" href="#">Link</a>
+13:            </li>
+14:    
+15:       
+16:          </ul>
+17:          <form class="d-flex">
+18:            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+19:            <button class="btn btn-outline-success" type="submit">Search</button>
+20:          </form>
+21:        </div>
+22:      </div>
+23:    </nav>
+  
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/home/_header.html.erb:3: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/home/_header.html.erb:25: syntax error, unexpected `end', expecting ')'
+app/views/layouts/application.html.erb:20
+Started GET "/" for ::1 at 2021-01-19 15:54:11 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 236)
+  Rendered layout layouts/application.html.erb (Duration: 10.9ms | Allocations: 3652)
+Completed 200 OK in 20ms (Views: 15.7ms | Allocations: 4856)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:54:18 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3001)
+Completed 200 OK in 5ms (Views: 4.2ms | Allocations: 3440)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:54:19 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3001)
+Completed 200 OK in 9ms (Views: 8.5ms | Allocations: 3439)
+
+
+Started GET "/home/about" for ::1 at 2021-01-19 15:54:28 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 102)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 3066)
+Completed 200 OK in 7ms (Views: 5.8ms | Allocations: 3631)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:54:31 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 7.9ms | Allocations: 3603)
+Completed 200 OK in 9ms (Views: 8.8ms | Allocations: 4044)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:54:32 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 2.9ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 11.4ms | Allocations: 3602)
+Completed 200 OK in 14ms (Views: 12.3ms | Allocations: 4044)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:54:34 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 74)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 3007)
+Completed 200 OK in 10ms (Views: 9.1ms | Allocations: 3448)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:56:28 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 109)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 252)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 3665)
+Completed 200 OK in 20ms (Views: 16.7ms | Allocations: 4869)
+
+
+Started GET "/home/about" for ::1 at 2021-01-19 15:57:03 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.4ms | Allocations: 100)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3702)
+Completed 200 OK in 12ms (Views: 10.7ms | Allocations: 4271)
+
+
+Started GET "/" for ::1 at 2021-01-19 15:57:05 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3530)
+Completed 200 OK in 25ms (Views: 22.9ms | Allocations: 4074)
+
+
+Started GET "/home/about" for ::1 at 2021-01-19 15:57:06 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.3ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 3024)
+Completed 200 OK in 19ms (Views: 17.4ms | Allocations: 3466)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCourses (20210119151729)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "courses" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "published" boolean, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210119151729"]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-19 15:21:17.931933"], ["updated_at", "2021-01-19 15:21:17.931933"]]
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/home/about" for ::1 at 2021-01-19 16:23:01 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.7ms | Allocations: 289)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 306)
+  Rendered layout layouts/application.html.erb (Duration: 49.5ms | Allocations: 21041)
+Completed 200 OK in 59ms (Views: 51.8ms | ActiveRecord: 0.0ms | Allocations: 24217)
+
+
+Started GET "/" for ::1 at 2021-01-19 16:23:07 +0100
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 104)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 8.6ms | Allocations: 3812)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 4394)
+
+
+Started GET "/home/about" for ::1 at 2021-01-19 16:23:08 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 37)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 97)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3729)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 4181)
+
+
+Started GET "/home/about" for ::1 at 2021-01-19 16:25:15 +0100
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 0.1ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 118)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 10480)
+Completed 200 OK in 18ms (Views: 17.1ms | Allocations: 11104)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:25:35 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/courses/index.html.erb:16
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 4.7ms | Allocations: 1842)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4946)
+Completed 200 OK in 16ms (Views: 12.7ms | ActiveRecord: 0.5ms | Allocations: 6509)
+
+
+Started GET "/courses/new" for ::1 at 2021-01-19 16:25:51 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 24.3ms | Allocations: 7805)
+  Rendered courses/new.html.erb within layouts/application (Duration: 25.4ms | Allocations: 8184)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 11104)
+Completed 200 OK in 42ms (Views: 30.4ms | ActiveRecord: 1.0ms | Allocations: 15858)
+
+
+Started POST "/courses" for ::1 at 2021-01-19 16:26:29 +0100
+Processing by CoursesController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "course"=>{"title"=>"java script", "description"=>"hasjnudnckjd c", "published"=>"0"}, "commit"=>"Create Course"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[36mCourse Create (0.5ms)[0m  [1m[32mINSERT INTO "courses" ("title", "description", "published", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "java script"], ["description", "hasjnudnckjd c"], ["published", 0], ["created_at", "2021-01-19 15:26:29.890853"], ["updated_at", "2021-01-19 15:26:29.890853"]]
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/courses_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 18ms (ActiveRecord: 2.4ms | Allocations: 5341)
+
+
+Started GET "/courses/1" for ::1 at 2021-01-19 16:26:29 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:67:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 303)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 3286)
+Completed 200 OK in 30ms (Views: 7.4ms | ActiveRecord: 0.2ms | Allocations: 6672)
+
+
+Started GET "/courses/1/edit" for ::1 at 2021-01-19 16:26:37 +0100
+Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:67:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/edit.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 2.9ms | Allocations: 932)
+  Rendered courses/edit.html.erb within layouts/application (Duration: 4.0ms | Allocations: 1233)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 82)
+  Rendered layout layouts/application.html.erb (Duration: 12.0ms | Allocations: 4826)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 5981)
+
+
+Started PATCH "/courses/1" for ::1 at 2021-01-19 16:26:41 +0100
+Processing by CoursesController#update as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "course"=>{"title"=>"java script33", "description"=>"hasjnudnckjd c", "published"=>"0"}, "commit"=>"Update Course", "id"=>"1"}
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:67:in `set_course'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/courses_controller.rb:44:in `block in update'
+  [1m[36mCourse Update (0.5ms)[0m  [1m[33mUPDATE "courses" SET "title" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["title", "java script33"], ["updated_at", "2021-01-19 15:26:41.382515"], ["id", 1]]
+  ↳ app/controllers/courses_controller.rb:44:in `block in update'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/courses_controller.rb:44:in `block in update'
+Redirected to http://localhost:3000/courses/1
+Completed 302 Found in 29ms (ActiveRecord: 3.6ms | Allocations: 5272)
+
+
+Started GET "/courses/1" for ::1 at 2021-01-19 16:26:41 +0100
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:67:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 0.5ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.2ms | Allocations: 83)
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3144)
+Completed 200 OK in 9ms (Views: 6.6ms | ActiveRecord: 0.1ms | Allocations: 4155)
+
+
+Started GET "/courses/1" for ::1 at 2021-01-19 16:31:25 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses" WHERE "courses"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/courses_controller.rb:67:in `set_course'
+  Rendering layout layouts/application.html.erb
+  Rendering courses/show.html.erb within layouts/application
+  Rendered courses/show.html.erb within layouts/application (Duration: 1.2ms | Allocations: 611)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 339)
+  Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 10141)
+Completed 200 OK in 40ms (Views: 18.4ms | ActiveRecord: 0.9ms | Allocations: 18752)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:31:29 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1237)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 4921)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms | Allocations: 5531)
+
+
+Started GET "/courses/new" for ::1 at 2021-01-19 16:31:34 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 20.2ms | Allocations: 3351)
+  Rendered courses/new.html.erb within layouts/application (Duration: 24.5ms | Allocations: 4121)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 34.2ms | Allocations: 7342)
+Completed 200 OK in 39ms (Views: 35.7ms | ActiveRecord: 0.0ms | Allocations: 7957)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:31:41 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 827)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.3ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 4512)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.1ms | Allocations: 4973)
+
+
+Started GET "/courses/new" for ::1 at 2021-01-19 16:31:42 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 2.7ms | Allocations: 872)
+  Rendered courses/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1028)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 12.2ms | Allocations: 4650)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.0ms | Allocations: 5124)
+
+
+Started GET "/courses/new" for ::1 at 2021-01-19 16:32:18 +0100
+Processing by CoursesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/new.html.erb within layouts/application
+  Rendered courses/_form.html.erb (Duration: 7.9ms | Allocations: 1242)
+  Rendered courses/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 1598)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.7ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 5265)
+Completed 200 OK in 27ms (Views: 24.1ms | ActiveRecord: 0.0ms | Allocations: 6501)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:32:49 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1090)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 4783)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.2ms | Allocations: 5377)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:33:28 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1107)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.6ms | Allocations: 321)
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4787)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.1ms | Allocations: 6010)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:34:06 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.4ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.1ms | Allocations: 321)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 4786)
+Completed 200 OK in 28ms (Views: 24.5ms | ActiveRecord: 0.4ms | Allocations: 6010)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:36:00 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1106)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.9ms | Allocations: 321)
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4786)
+Completed 200 OK in 15ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 6010)
+
+
+Started GET "/courses" for ::1 at 2021-01-19 16:36:01 +0100
+Processing by CoursesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:16
+  Rendered courses/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 833)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.5ms | Allocations: 129)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 3921)
+Completed 200 OK in 28ms (Views: 12.5ms | ActiveRecord: 0.2ms | Allocations: 4382)
+
+
