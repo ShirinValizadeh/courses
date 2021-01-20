@@ -11,22 +11,34 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
+
+<form>
+  <div class="mb-3">
+      <div class="field form-group">
+    <% form.label :title  %>
+    <%= form.text_field :title ,class:"form-control"  , placeholder:"Title"%>
   </div>
 
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  </div>
+  <div class="mb-3">
+  <div class="field form-group">
+    <% form.label :description %>
+    <%= form.text_area :description ,  class:"form-control" ,placeholder:"Description" %>
+  </div>
   </div>
 
-  <div class="field">
+  <div class="mb-3 ">
+ <div class="field form-group">
     <%= form.label :published %>
     <%= form.check_box :published %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
+    <div class="actions">
+    <%= form.submit class:"btn btn-success" %>
+  </div>
+</form>
+
+
+
+
 <% end %>
