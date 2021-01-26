@@ -1,15 +1,10 @@
-<p id="notice"><%= notice %></p>
 
-
-
-
-
-
-
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @course.title %>
 </p>
+
 
 <p>
   <strong>Description:</strong>
@@ -23,3 +18,5 @@
 
 <%= link_to 'Edit', edit_course_path(@course) %> |
 <%= link_to 'Back', courses_path %>
+
+</div>

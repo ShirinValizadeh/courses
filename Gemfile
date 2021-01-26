@@ -12,6 +12,8 @@ gem 'webpacker', '~> 5.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'bootsnap', '>= 1.4.4', require: false
+gem 'devise', '~> 4.7', '>= 4.7.3'
+
 
 group :development, :test do
 
