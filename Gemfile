@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '2.7.2'
 
 
 gem 'rails', '~> 6.1.1'
@@ -30,6 +30,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'rubocop', require: false
+  gem "rubocop-rails_config"
 end
 
 group :test do
