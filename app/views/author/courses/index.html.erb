@@ -15,12 +15,20 @@
 
   <tbody>
     <% @courses.each do |course| %>
+    <% if course.user == current_user %>
       <tr>
         <td><%= course.title %></td>
         <td><%= course.description %></td>
         <td><%= course.published %></td>
-        <td><%= link_to 'Show', course %></td>
+        <td><%= link_to 'Show', author_course_path(course) %></td>
+        <td><%= link_to 'Edit', edit_author_course_path(course) %></td>
+        <td><%= link_to 'Destroy', author_course_path(course), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>
+
+<br>
+
+<%= link_to 'New Course', new_author_course_path , class:"btn btn-secondary"%>

@@ -1,0 +1,37 @@
+<%= form_with(model: [:author ,@course, @lesson]) do |form| %>
+  <% if  @lesson.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize( @lesson.errors.count, "error") %> prohibited this course from being saved:</h2>
+
+      <ul>
+        <%  @lesson.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="mb-3">
+      <div class="field form-group">
+    <% form.label :title  %>
+    <%= form.text_field :title ,class:"form-control"  , placeholder:"Title"%>
+  </div>
+
+  </div>
+  <div class="mb-3">
+  <div class="field form-group">
+    <% form.label :body %>
+    <%= form.text_area :body ,  class:"form-control" ,placeholder:"body" %>
+  </div>
+  </div>
+
+
+    <div class="actions">
+    <%= form.submit class:"btn btn-success" %>
+  </div>
+
+
+<% end %>
+<%= link_to "Back", author_course_path(@course) %>
