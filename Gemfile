@@ -5,7 +5,9 @@ ruby '2.7.2'
 
 
 gem 'rails', '~> 6.1.1'
-gem 'sqlite3', '~> 1.4'
+# Use postgresql as the database for Active Record
+gem "pg", ">= 0.18", "< 2.0"
+
 gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'webpacker', '~> 5.0'
@@ -16,8 +18,9 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 
 
 group :development, :test do
-
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :development do
