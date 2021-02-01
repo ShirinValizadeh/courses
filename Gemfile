@@ -18,8 +18,9 @@ gem 'devise', '~> 4.7', '>= 4.7.3'
 
 
 group :development, :test do
-
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem "factory_bot_rails"
+  gem "faker"
 end
 
 group :development do
