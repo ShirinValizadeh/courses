@@ -1,10 +1,7 @@
 module Author
-  class CoursesController < ApplicationController
+  class CoursesController < BaseController
     before_action :set_course, only: [:show, :edit, :update, :destroy]
-    before_action :authenticate_user! ,except: [:show , :index]   #check if user ist login
-    before_action :correct_user, only: [:edit , :update , :destroy]  #check if ist currect user
-
-
+    
     # GET /courses
     # GET /courses.json
     def index
@@ -63,11 +60,7 @@ module Author
     end
 
 
-    def correct_user
-      @course = current_user.courses.find_by(id: params[:id])
-      redirect_to courses_path , notice: "Not Authorized To Edit This Course " if @course.nil? 
-    end
-
+   
 
 
 
@@ -78,7 +71,7 @@ module Author
       
       # Use callbacks to share common setup or constraints between actions.
       def set_course
-        @course = Course.find(params[:id])
+        @course = current_user.courses.find(params[:id])
       end
 
       # Only allow a list of trusted parameters through.

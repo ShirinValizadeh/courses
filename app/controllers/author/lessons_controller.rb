@@ -1,5 +1,5 @@
 module Author
-  class LessonsController < ApplicationController
+  class LessonsController < BaseController
     before_action :set_course 
     before_action :set_lesson, only: [:show, :edit, :update, :destroy]
 
@@ -19,7 +19,7 @@ module Author
       @lesson.course = @course
 
       if @lesson.save
-        redirect_to author_courses_url, notice: 'Lesson was successfully created.'
+        redirect_to author_course_url(@course), notice: 'Lesson was successfully created.'
       else
         render :new
       end
@@ -32,7 +32,7 @@ module Author
 
     def update
       if @lesson.update(lesson_params)
-        redirect_to author_courses_url, notice: 'Lesson was successfully updated.'
+        redirect_to author_course_url(@course), notice: 'Lesson was successfully updated.'
       else
         render :edit
       end
@@ -44,7 +44,7 @@ module Author
     def destroy
       @lesson.destroy
       respond_to do |format|
-        format.html { redirect_to author_courses_url, notice: 'Lesson was successfully destroyed.' }
+        format.html { redirect_to author_course_url(@course), notice: 'Lesson was successfully destroyed.' }
         format.json { head :no_content }
       end
     end
@@ -56,7 +56,7 @@ module Author
 
     # Use callbacks to share common setup or constraints between actions.
     def set_course
-      @course = Course.find(params[:course_id])
+      @course = current_user.courses.find(params[:course_id])
     end
 
     def set_lesson
