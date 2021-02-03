@@ -1,2 +1,6 @@
 <h1>Home Page</h1>
 
+<% if signed_in? %>
+  Hallo <%= current_user.email %>!
+<% end %>
+

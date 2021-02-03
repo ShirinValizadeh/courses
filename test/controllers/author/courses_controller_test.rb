@@ -17,9 +17,16 @@ class Author::CoursesControllerTest < ActionDispatch::IntegrationTest
     assert_no_match @another_author_course.title, response.body
   end
 
+  test 'should NOT get index if user has no author flag' do
+    sign_in create(:user)
+
+    get author_courses_url
+    assert_redirected_to courses_url
+  end
+
   test 'should get new' do
     get new_author_course_url
-    assert_response :success
+    assert_response :success 
   end
 
   test 'should create course' do
