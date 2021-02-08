@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'test_helper'
 
 class CoursesControllerTest < ActionDispatch::IntegrationTest
@@ -16,8 +18,6 @@ class CoursesControllerTest < ActionDispatch::IntegrationTest
   end
 end
 
-
-
 class CoursesControllerSignInTest < ActionDispatch::IntegrationTest
   setup do
     @course = create(:course)
@@ -34,3 +34,5 @@ class CoursesControllerSignInTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 end
+
+

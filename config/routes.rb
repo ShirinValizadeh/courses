@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 Rails.application.routes.draw do
   devise_for :users
 
@@ -11,15 +13,14 @@ Rails.application.routes.draw do
     end
   end
 
-  
   # courses_url #index
   # course_url(@course) #show
   # /courses
   # /courses/:id
-    resources :courses, only: [:index, :show] do
-     resources :lessons, only: [:index, :show]
+  resources :courses, only: %i[index show] do
+    resources :lessons, only: %i[index show]
+    resources :enrollments, only: [:create]
   end
-
 
   get 'about', to: 'about#index'
   root 'home#index'

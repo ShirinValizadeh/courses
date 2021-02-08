@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Author
   class BaseController < LoggedInController
     before_action :correct_user
@@ -5,9 +7,7 @@ module Author
     private
 
     def correct_user
-      if !current_user.author?
-        redirect_to courses_path, notice: "Not Authorized To Edit This Course"
-      end
+      redirect_to courses_path, notice: 'Not Authorized To Edit This Course' unless current_user.author?
     end
   end
 end

@@ -1,11 +1,11 @@
+# frozen_string_literal: true
+
 module Author
   class LessonsController < BaseController
-    before_action :set_course 
-    before_action :set_lesson, only: [:show, :edit, :update, :destroy]
+    before_action :set_course
+    before_action :set_lesson, only: %i[show edit update destroy]
 
-    def show
-    end
-
+    def show; end
 
     # GET /Lessens/new
     def new
@@ -25,10 +25,7 @@ module Author
       end
     end
 
-
-
-    def edit
-    end
+    def edit; end
 
     def update
       if @lesson.update(lesson_params)
@@ -38,8 +35,7 @@ module Author
       end
     end
 
-
-  # DELETE /lesson/1
+    # DELETE /lesson/1
     # DELETE /lesson/1.json
     def destroy
       @lesson.destroy
@@ -48,9 +44,6 @@ module Author
         format.json { head :no_content }
       end
     end
-
-
-
 
     private
 
@@ -66,6 +59,5 @@ module Author
     def lesson_params
       params.require(:lesson).permit(:title, :body)
     end
-
   end
 end
