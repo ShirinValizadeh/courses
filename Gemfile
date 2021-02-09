@@ -22,6 +22,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'faker'
   gem "solargraph"
+  gem 'mail_form'
 end
 
 group :development do
@@ -35,6 +36,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-rails_config'
   gem 'spring'
+
 end
 
 group :test do

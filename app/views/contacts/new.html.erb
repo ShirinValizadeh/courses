@@ -1,0 +1,36 @@
+<%= form_with( model: @contact) do |form| %>
+
+  <h3> Contact Form </h3>
+<br/>
+  <div class="mb-3">
+  <div class="field form-group">
+    <% form.label :email  %>
+    <%= form.text_field :email ,class:"form-control"  , placeholder:"Email"%>
+  </div>
+
+  </div>
+  <div class="mb-3">
+  <div class="field form-group">
+    <% form.label :subject %>
+    <%= form.text_field :subject ,  class:"form-control" ,placeholder:"Subject" %>
+  </div>
+  </div>
+
+
+  
+  <div class="mb-3">
+  <div class="field form-group">
+    <% form.label :description %>
+    <%= form.text_area :description ,  class:"form-control" ,placeholder:"Description" %>
+  </div>
+  </div>
+
+
+    <div class="actions">
+    <%= form.submit class:"btn btn-success" %>
+  </div>
+  </div>
+
+
+<% end %>
+
