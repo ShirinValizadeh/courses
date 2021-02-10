@@ -9,5 +9,11 @@ FactoryBot.define do
     factory :author do
       author { true }
     end
+
+
+    factory :admin do
+      admin { true }
+    end
+    
   end
 end

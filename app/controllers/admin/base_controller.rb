@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module admin
+module Admin
   class BaseController < LoggedInController
-    before_action :correct_user
+    before_action :correct_user  #admin
 
     private
 

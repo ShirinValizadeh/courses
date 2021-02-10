@@ -1,4 +1,6 @@
-<%= form_with(model: [:admin , posting]) do |form| %>
+
+
+<%= form_with( model: [:admin , posting]) do |form| %>
   <% if posting.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(posting.errors.count, "error") %> prohibited this posting from being saved:</h2>

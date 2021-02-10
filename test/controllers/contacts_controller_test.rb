@@ -13,7 +13,7 @@ class ContactsControllerTest < ActionDispatch::IntegrationTest
 
       test 'should create contact' do
         assert_difference('Contact.count') do
-          post contacts_url,
+          post contact_url,
                params: { contact: { email: @contact.email, subject: @contact.subject,
                 description: @contact.description } }
         end

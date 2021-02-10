@@ -16,7 +16,7 @@
       <tr>
         <td><%= posting.title %></td>
         <td><%= posting.description %></td>
-        <td><%= link_to 'Show', admin_posting_path(posring) %></td>
+        <td><%= link_to 'Show', admin_posting_path(posting) %></td>
         <td><%= link_to 'Edit', edit_admin_posting_path(posting) %></td>
         <td><%= link_to 'Destroy', admin_posting_path(posting), method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

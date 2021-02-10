@@ -16,7 +16,7 @@ class PostingsController <  BaseController
 
   # GET /postings/new
   def new
-    @posting = current_user.postings.build
+    @posting = Posting.new
   end
 
   # GET /postings/1/edit
@@ -26,9 +26,9 @@ class PostingsController <  BaseController
   # POST /postings
   # POST /postings.json
   def create
-    @posting = current_user.postings.build(posting_params)
-    @posting.user = current_user
-    respond_to do |format|
+    @posting = Posting.new(posting_params)
+   
+   
       if @posting.save
          redirect_to admin_postings_url, notice: 'Posting was successfully created.' 
   
@@ -36,13 +36,13 @@ class PostingsController <  BaseController
         render :new 
       
       end
-    end
+   
   end
 
   # PATCH/PUT /postings/1
   # PATCH/PUT /postings/1.json
   def update
-    respond_to do |format|
+   # respond_to do |format|    for json oder ... 
       if @posting.update(posting_params)
        redirect_to admin_postings_url, notice: 'Posting was successfully updated.' 
  
@@ -50,23 +50,23 @@ class PostingsController <  BaseController
        render :edit 
        
       end
-    end
+   # end
   end
 
   # DELETE /postings/1
   # DELETE /postings/1.json
   def destroy
     @posting.destroy
-    respond_to do |format|
-     redirect_to postings_url, notice: 'Posting was successfully destroyed.' 
+   
+     redirect_to admin_postings_url, notice: 'Posting was successfully destroyed.' 
     
-    end
+   
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_posting
-      @posting = current_user.postings.find(params[:id])
+      @posting = Posting.find(params[:id])
     end
 
     # Only allow a list of trusted parameters through.
