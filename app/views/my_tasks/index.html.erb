@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<h1>My Tasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+ 
+    <% @my_tasks.each do |task| %>
+     <% if !task.completed  %>
+      <tr>
+        <td><%= task.title %></td>
+        <td> <%= link_to "Mark as completed", my_task_path(task, {  my_task: { completed: true} }), method: :patch %> </td>
+
+      </tr>
+    <% end %>
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

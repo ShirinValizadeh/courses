@@ -3,6 +3,7 @@
 Rails.application.routes.draw do
   
   
+  resources :tasks
   devise_for :users
 
   # author_courses_url #index
@@ -16,9 +17,10 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :postings
+    resources :postings 
   end
 
+  
 
   # courses_url #index
   # course_url(@course) #show
@@ -34,7 +36,8 @@ Rails.application.routes.draw do
 
   get 'about', to: 'about#index'
   resource :contact
-
+  resources :my_tasks
+  
   root 'home#index'
   # get 'home/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
