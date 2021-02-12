@@ -12,15 +12,25 @@
 
   <tbody>
     <% @tasks.each do |task| %>
+     <% if task.completed? %>
  
       <tr>
       
         <td><%= task.title %></td>
+        <td> task is Done</td>
         <td><%= link_to 'Show', task %></td>
         <td><%= link_to 'Edit', edit_task_path(task) %></td>
         <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
-   
+    <% else %>
+         <tr>
+        <td><%= task.title %></td>
+    
+        <td><%= link_to 'Show', task %></td>
+        <td><%= link_to 'Edit', edit_task_path(task) %></td>
+        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
     <% end %>
 
   </tbody>
