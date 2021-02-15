@@ -27,14 +27,10 @@ module Author
       # @course = Course.new(course_params)
       @course = current_user.courses.build(course_params)
       @course.user = current_user
-      respond_to do |format|
         if @course.save
-          format.html { redirect_to author_courses_url, notice: 'Course was successfully created.' }
-
+         redirect_to author_courses_url, notice: 'Course was successfully created.'
         else
-          format.html { render :new }
-
-        end
+         render :new    
       end
     end
 

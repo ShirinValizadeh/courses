@@ -22,42 +22,32 @@ class TasksController < ApplicationController
   end
 
   # POST /tasks
-  # POST /tasks.json
   def create
     @task = current_user.tasks.build(task_params)
     @task.user = current_user
-   
       if @task.save
-      redirect_to @task, notice: 'Task was successfully created.' 
-     
+      redirect_to tasks_url, notice: 'Task was successfully created.'  
       else
+       # p @task.errors
         render :new 
-     
       end
     
   end
 
   # PATCH/PUT /tasks/1
-  # PATCH/PUT /tasks/1.json
   def update
- 
       if @task.update(task_params)
-         redirect_to @task, notice: 'Task was successfully updated.' 
-      
+         redirect_to task_url, notice: 'Task was successfully updated.'       
       else
          render :edit 
-
       end
-    
   end
 
   # DELETE /tasks/1
-  # DELETE /tasks/1.json
   def destroy
     @task.destroy
- 
      redirect_to tasks_url, notice: 'Task was successfully destroyed.' 
-     
+   
     end
   
 

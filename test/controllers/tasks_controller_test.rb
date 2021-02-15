@@ -2,12 +2,16 @@ require "test_helper"
 
 class TasksControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @task = tasks(:one)
+    @user = create(:user)
+    @assignee = create(:user)
+    @task = create(:task, assignee: @assignee, user: @user )
+    sign_in @user
   end
 
   test "should get index" do
     get tasks_url
     assert_response :success
+    assert_match @task.title, response.body
   end
 
   test "should get new" do
@@ -17,11 +21,13 @@ class TasksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create task" do
     assert_difference('Task.count') do
-      post tasks_url, params: { task: { title: @task.title } }
-    end
+    post tasks_url,
+       params: { task: { title: @task.title , assignee_id: @task.assignee_id } }
+       
+    end 
+        assert_redirected_to tasks_url
+   end
 
-    assert_redirected_to task_url(Task.last)
-  end
 
   test "should show task" do
     get task_url(@task)

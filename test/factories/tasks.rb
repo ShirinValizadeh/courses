@@ -1,5 +1,7 @@
 FactoryBot.define do
   factory :task do
-    title { "MyString" }
+    sequence(:title) { |n| "Task #{n}" }
+
+    assignee factory: :user
   end
 end
