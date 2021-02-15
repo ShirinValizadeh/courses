@@ -14,4 +14,9 @@ class Course < ApplicationRecord
   def enrolled?(current_user)
     coursenrollments.find_by(user: current_user)
   end
+
+  def next_lesson(lesson)
+    index = lessons.find_index { |l| l.id == lesson.id }
+    lessons[index + 1]
+  end
 end

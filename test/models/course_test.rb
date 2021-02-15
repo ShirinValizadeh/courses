@@ -21,4 +21,15 @@ class CourseTest < ActiveSupport::TestCase
     create(:lesson, course: course)
     assert_equal 1, course.lessons_count
   end
+
+  test '#next_lesson returns next lesson' do
+    course = create(:course)
+    first_lesson = create(:lesson, course: course)
+    second_lesson = create(:lesson, course: course)
+    third_lesson = create(:lesson, course: course)
+
+    assert_equal second_lesson, course.next_lesson(first_lesson)
+    assert_equal third_lesson, course.next_lesson(second_lesson)
+    assert_nil course.next_lesson(third_lesson)
+  end
 end

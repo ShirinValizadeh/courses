@@ -6,6 +6,8 @@ class LessonsController < LoggedInController
   before_action :check_enrollment
 
   def show
+    @next_lesson = @course.next_lesson(@lesson)
+    # <%= link_to "Next Lesson", course_lesson_path(@course, @next_lesson) %>
   end
 
   private
