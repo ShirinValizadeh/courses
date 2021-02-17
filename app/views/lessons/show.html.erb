@@ -1,1 +1,54 @@
-<h1>Course <%= @course.title %> Lesson <%= @lesson.title %> </h1>
+
+
+  <div class="progress">
+    <div class="progress-bar" role="progressbar" 
+    style="width: <%= @course.progress_for(current_user)%>%"
+    aria-valuenow="<%= @course.progress_for(current_user) %>"
+    aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> % </div>
+  </div>
+<div class="container">
+
+<br/>
+<br/>
+
+  <br/>
+<br/>
+  <div class="row table">
+
+  
+    <div class="col-sm-3">  
+      <% @course.lessons.each do |lesson| %> 
+        <div class="row">
+          <% if @lesson.id == lesson.id %>
+            <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none fw-bold"  %>  
+          
+          <% else %>
+            <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none"  %>   
+          <% end %>
+
+          <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
+            <p>Done</p>
+          <%end%>
+
+        </div>
+      <% end %> 
+    </div>
+ 
+
+    <div class="col-8">  
+      <h4>Course <%= @course.title %> </h4>
+      <p> Lesson <%= @lesson.title %></p>
+    </div>
+
+  </div>
+ 
+    <br/>
+    <br/>
+
+    <% if  @next_lesson || @course.last_lesson?(@lesson) %>
+        <%=   link_to "Next ", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm'%>
+    <% end %>
+        <% if  @previous_lesson %>
+        <%= link_to "Previous Lesson", course_lesson_path(@course, @previous_lesson), class: 'btn btn-dark btn-sm'%>
+    <% end %>
+</div>   

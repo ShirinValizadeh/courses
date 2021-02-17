@@ -3,6 +3,7 @@
 Rails.application.routes.draw do
   
   
+  
   resources :tasks
   devise_for :users
 
@@ -27,13 +28,15 @@ Rails.application.routes.draw do
   # /courses
   # /courses/:id
   resources :courses, only: %i[index show] do
+    resources :completedlessons    
     resources :lessons, only: %i[index show]
     resources :enrollments, only: [:create]
  end
   resources :postings, only: %i[index ] 
-
  
+  resources :finished_courses, only: %i[show ] 
 
+  
   get 'about', to: 'about#index'
   resource :contact
   resources :my_tasks

@@ -9,6 +9,8 @@ class User < ApplicationRecord
   has_many :courses
   has_many :coursenrollments
   has_many :tasks
+  has_many :completedlessons
+  has_many :finished_course
 
 
 end

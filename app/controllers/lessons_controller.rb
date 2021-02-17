@@ -7,7 +7,7 @@ class LessonsController < LoggedInController
 
   def show
     @next_lesson = @course.next_lesson(@lesson)
-    # <%= link_to "Next Lesson", course_lesson_path(@course, @next_lesson) %>
+    @previous_lesson = @course.previous_lesson(@lesson)
   end
 
   private

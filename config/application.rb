@@ -21,4 +21,7 @@ module Curses
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
   end
+
+  config.assets.precompile += %w('.svg')
+  config.assets.css_compressor = :sass
 end
