@@ -1,5 +1,49 @@
 
 <div class="container">
+
+
+<div class="card" style="width: 18rem;">
+   <% if @course.image.representable? %>
+   <%= image_tag @course.image.representation(resize_to_limit: [300, 200]) %>
+  <% end %>
+  <div class="card-body">
+    <h5 class="card-title"><%= @course.title %></h5>
+    <p class="card-text"><%= @course.description %></p>
+    <div>Published: <%= @course.published %></div>
+  </div>
+  <div class="card-body">
+<% if @course.enrolled?(current_user) %>
+
+
+    <h3>Lessons Liste</h3>
+
+
+    <table class="table table-hover">
+
+    <% @course.lessons.each do |lesson| %>
+        <thead class="table-light">
+          <tr>
+
+            <td>
+              <%= link_to lesson.title, course_lesson_path(@course, lesson),  class: "text-decoration-none text-reset" %>
+            </td>
+          </tr>
+
+        </thead>
+
+    <% end %>
+    </table>
+
+  <% else %>
+    <%= form_with(url: course_enrollments_path(@course)) do |form| %>
+    <%= form.submit "Enroll", class:"btn btn-success" %>
+  <% end %>
+
+<% end %>
+
+  </div>
+</div>
+
 <table class="table table-hover">
 
    <thead class="table-success">
@@ -23,7 +67,13 @@
 <br/>
 <br/>
 
+  <% if @course.image.representable? %>
+   <%= image_tag @course.image.representation(resize_to_limit: [300, 200]) %>
+  <% end %>
+
 <% if @course.enrolled?(current_user) %>
+
+
     <h3>Lessons Liste</h3>
 
 

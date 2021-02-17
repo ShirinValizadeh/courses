@@ -16,6 +16,7 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
+ gem 'image_processing'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -23,6 +24,9 @@ group :development, :test do
   gem 'faker'
   gem "solargraph"
   gem 'mail_form'
+ 
+
+ 
 end
 
 group :development do

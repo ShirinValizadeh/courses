@@ -2,47 +2,53 @@ require "test_helper"
 
 class CompletedlessonsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @completedlesson = completedlessons(:one)
+    @user = create(:user)
+    @course = create(:course , user: @user)
+    @lesson = create(:lesson, course: @course)
+   
+    sign_in @user
   end
 
-  test "should get index" do
-    get completedlessons_url
-    assert_response :success
-  end
 
-  test "should get new" do
-    get new_completedlesson_url
-    assert_response :success
-  end
-
-  test "should create completedlesson" do
+  test "should create completed lesson and redirected to finished course page if course is completed" do
     assert_difference('Completedlesson.count') do
-      post completedlessons_url, params: { completedlesson: {  } }
+      post course_completedlessons_url(@course),
+       params: { lesson_id: @lesson.id }
     end
-
-    assert_redirected_to completedlesson_url(Completedlesson.last)
+    assert_redirected_to finished_course_url(@course)
+  
   end
 
-  test "should show completedlesson" do
-    get completedlesson_url(@completedlesson)
-    assert_response :success
-  end
-
-  test "should get edit" do
-    get edit_completedlesson_url(@completedlesson)
-    assert_response :success
-  end
-
-  test "should update completedlesson" do
-    patch completedlesson_url(@completedlesson), params: { completedlesson: {  } }
-    assert_redirected_to completedlesson_url(@completedlesson)
-  end
-
-  test "should destroy completedlesson" do
-    assert_difference('Completedlesson.count', -1) do
-      delete completedlesson_url(@completedlesson)
+  test "should create completed lesson and redirected to next lesson if course is NOT completed" do
+    create(:lesson, course: @course)
+    assert_difference('Completedlesson.count') do
+      post course_completedlessons_url(@course),
+      params: { lesson_id: @lesson.id }
     end
-
-    assert_redirected_to completedlessons_url
+    assert_redirected_to course_lessons_url(@course, @course.next_lesson(@lesson))
   end
+
+  test "should only redirected to finished course page if course is completed" do
+    create(:completed_lesson, lesson: @lesson, course: @course, user: @user)
+    assert_no_difference('Completedlesson.count') do
+      post course_completedlessons_url(@course),
+      params: { lesson_id: @lesson.id }
+    end
+    assert_redirected_to finished_course_url(@course)
+  end
+
+  test "should only redirected to next lesson if course is NOT completed" do
+    create(:completed_lesson, lesson: @lesson, course: @course, user: @user)
+    create(:lesson, course: @course)
+    # ....
+  end
+
+
+  # test "should destroy completedlesson" do
+  #   assert_difference('Completedlesson.count', -1) do
+  #     delete completedlesson_url(@completedlesson)
+  #   end
+
+  #   assert_redirected_to completedlessons_url
+  # end
 end

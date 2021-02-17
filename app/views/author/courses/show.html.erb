@@ -16,6 +16,12 @@
   <%= @course.published %>
 </p>
 
+
+
+  <% if @course.image.representable? %>
+   <%= image_tag @course.image.representation(resize_to_limit: [300, 200]) %>
+  <% end %>
+
 <h3>Lessons</h3>
 
 <div class="mb-5">
@@ -24,6 +30,10 @@
       <%= link_to lesson.title, author_course_lesson_path(@course, lesson) %>
     </div>
   <% end %>
+
+
+
+
 </div>
 
  <%= link_to 'Add lesson', new_author_course_lesson_path(@lesson, course_id: @course.id) %> | 

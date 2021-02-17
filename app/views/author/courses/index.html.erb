@@ -16,6 +16,7 @@
   <tbody>
     <% @courses.each do |course| %>
     <% if course.user == current_user %>
+
       <tr>
         <td><%= course.title %></td>
         <td><%= course.description %></td>

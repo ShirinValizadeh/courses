@@ -63,7 +63,7 @@ module Author
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:title, :description, :published)
+      params.require(:course).permit(:title, :description, :published , :image)
     end
   end
 end

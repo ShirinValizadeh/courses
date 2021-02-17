@@ -22,6 +22,5 @@ module Curses
     # config.eager_load_paths << Rails.root.join("extras")
   end
 
-  config.assets.precompile += %w('.svg')
-  config.assets.css_compressor = :sass
+
 end

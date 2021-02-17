@@ -5,6 +5,7 @@ class Course < ApplicationRecord
   has_many :lessons, dependent: :destroy
   has_many :coursenrollments, dependent: :destroy
   validates :title, presence: true
+  has_one_attached :image
 
   validates :description, length: { maximum: 200 }
 
