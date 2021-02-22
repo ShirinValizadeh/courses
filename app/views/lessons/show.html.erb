@@ -1,11 +1,26 @@
 
 
-  <div class="progress">
-    <div class="progress-bar" role="progressbar" 
-    style="width: <%= @course.progress_for(current_user)%>%"
-    aria-valuenow="<%= @course.progress_for(current_user) %>"
-    aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> % </div>
-  </div>
+<br/>
+<br/>
+
+
+
+
+
+
+          <div class="progress ">
+            <div class="progress-bar " role="progressbar" 
+              style="width: <%= @course.progress_for(current_user)%>%"
+              aria-valuenow="<%= @course.progress_for(current_user) %>"
+              aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> %
+              
+            </div>
+          </div>
+
+
+
+
+
 <div class="container">
 <br/>
 <br/>
@@ -14,6 +29,7 @@
 
   <br/>
 <br/>
+
   <div class="row table">
 
     <div class="col-sm-3">  
@@ -30,7 +46,7 @@
               </li>
           <% end %>
           <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
-            <p>Done</p>
+            <p><i class="far fa-check-circle"></i></p>
           <%end%>
         </ul>
       </div>
