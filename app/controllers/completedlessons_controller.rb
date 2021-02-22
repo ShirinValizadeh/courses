@@ -2,7 +2,7 @@ class CompletedlessonsController < ApplicationController
   before_action :set_completedlesson, only: [:destroy]
   before_action :set_course
   before_action :set_lesson
-
+  before_action :check_enrollment
 
   
 
@@ -44,7 +44,12 @@ class CompletedlessonsController < ApplicationController
     end
 
     def set_course
-      @course = current_user.courses.find(params[:course_id])
+      @course = Course.find(params[:course_id])
+    end
+
+
+    def check_enrollment
+      redirect_to course_url(@course), notice: 'you are not enrolled yet' unless @course.enrolled?(current_user)
     end
 
     def set_lesson
