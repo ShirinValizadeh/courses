@@ -15,7 +15,7 @@
 
         <div class="col-md-8 p-2">
           <div class="card-body">
-            <h5 class="card-title"><%= @course.title %></h5>
+            <h5 class="card-title text-capitalize"><%= @course.title %></h5>
             <p class="card-text"><%= @course.description %></p>
             <%#Published: <%= @course.published %>
           </div>
@@ -33,7 +33,7 @@
                       <thead class="table-light">
                           <tr>
                             <td>
-                                <%= link_to lesson.title, course_lesson_path(@course, lesson),  class: "text-decoration-none text-reset text-uppercase" %>
+                                <%= link_to lesson.title, course_lesson_path(@course, lesson),  class: "text-decoration-none text-reset text-capitalize" %>
                             </td>
                           </tr>
                       </thead>
