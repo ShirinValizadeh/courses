@@ -14,7 +14,9 @@
  *= require_self
  */
 
-
+.b-color{
+    background-image: linear-gradient(139deg, #d6f3e752 27%, #edfaa852 100%, #ffffff 100%);
+}
 .card-courses{
     border-radius: 5px;   	
 }
@@ -25,8 +27,12 @@
 
 }
 
+.img-cours-id{
+    object-fit: cover;
+    max-width: 100%;
+}
 
-.bColor{
+.b-navbar-color{
     background-image: linear-gradient(-20deg, #ddd6f3 0%, #faaca8 100%, #faaca8 100%);
 }
 
@@ -38,3 +44,4 @@
 .progress-bar{
     background-color: black;
 }
+
