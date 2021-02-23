@@ -50,7 +50,7 @@ module Author
     def destroy
       @course.destroy
       respond_to do |format|
-        format.html { redirect_to courses_url, notice: 'Course was successfully destroyed.' }
+        format.html { redirect_to author_courses_url, notice: 'Course was successfully destroyed.' }
       end
     end
 
@@ -63,7 +63,7 @@ module Author
 
     # Only allow a list of trusted parameters through.
     def course_params
-      params.require(:course).permit(:title, :description, :published , :image)
+      params.require(:course).permit(:title, :body, :published , :image)
     end
   end
 end

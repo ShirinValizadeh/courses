@@ -7,6 +7,8 @@ class Course < ApplicationRecord
   validates :title, presence: true
   has_one_attached :image
 
+  has_rich_text :body
+
   validates :description, length: { maximum: 200 }
 
   delegate :count, to: :lessons, prefix: true
