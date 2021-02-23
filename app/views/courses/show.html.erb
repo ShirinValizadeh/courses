@@ -4,7 +4,7 @@
 <div class="col-lg-8 m-5 p-2">
   <div class="container p-2">
 
-    <div class="card  p-2 b-color" style="max-width: 740px;">
+    <div class="card  p-2 b-color shadow-lg" style="max-width: 740px;">
       <div class="row g-0 p-2">
 
         <div class="col-md-4 p-2">
@@ -43,7 +43,7 @@
 
             <% else %>
                 <%= form_with(url: course_enrollments_path(@course)) do |form| %>
-                <%= form.submit "Enroll", class:"btn btn-success" %>
+                <%= form.submit "Enroll", class:"btn btn-success shadow-lg " %>
             <% end %>
 
             <% end %>
