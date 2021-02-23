@@ -2,72 +2,66 @@
 
 <br/>
 <br/>
+<div class="row">
+  <div class="col-lg-2"></div>
 
+  <div class="col-lg-8 mt-5">
 
-
-
-
-
-          <div class="progress ">
-            <div class="progress-bar " role="progressbar" 
-              style="width: <%= @course.progress_for(current_user)%>%"
-              aria-valuenow="<%= @course.progress_for(current_user) %>"
-              aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> %
-              
-            </div>
+    <div class="card mb-3 bTColor" style="max-width: 640px;">
+      <div class="row g-0">
+        <div class="progress ">
+          <div class="progress-bar " role="progressbar" 
+          style="width: <%= @course.progress_for(current_user)%>%"
+          aria-valuenow="<%= @course.progress_for(current_user) %>"
+          aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> %             
           </div>
+        </div>
+        <br/>
 
+        <div class="col-md-4">
+          <div class="card" >
+            <ul class="list-group list-group-flush">
+              <% @course.lessons.each do |lesson| %> 
+              <% if @lesson.id == lesson.id %>
+                  <li class="list-group-item">
+                    <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset fw-bold fst-italic"  %>  
+                  </li>
+              <% else %>
+                  <li class="list-group-item">
+                    <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset"  %>   
+                  </li>
+              <% end %>
+                <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
+                <p><i class="far fa-check-circle"></i></p>
+                <%end%>
+              <% end %> 
+            </ul>
+          </div>
+        </div>
 
-
-
-
-<div class="container">
-<br/>
-<br/>
-
-
-
-  <br/>
-<br/>
-
-  <div class="row table">
-
-    <div class="col-sm-3">  
-      <% @course.lessons.each do |lesson| %> 
-      <div class="row">
-        <ul class="list-group list-group-flush">
-          <% if @lesson.id == lesson.id %>
-              <li class="list-group-item">
-                 <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset fw-bold fst-italic"  %>  
-              </li>
-          <% else %>
-              <li class="list-group-item">
-                <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset"  %>   
-              </li>
-          <% end %>
-          <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
-            <p><i class="far fa-check-circle"></i></p>
-          <%end%>
-        </ul>
+    <div class="col-md-8">
+      <div class="card-body text-center">
+         <h4 class="fst-italic">Course <%= @course.title %> </h4>
+            <p> Lesson <%= @lesson.title %></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
       </div>
-      <% end %> 
-    </div>
- 
-
-    <div class="col-8">  
-      <h4 class="fst-italic">Course <%= @course.title %> </h4>
-      <p> Lesson <%= @lesson.title %></p>
+            <div class="position-absolute bottom-0 end-0">
+             <% if  @next_lesson || @course.last_lesson?(@lesson) %>
+            <%=   link_to "Next ", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm'%>
+            <% end %>
+            <% if  @previous_lesson %>
+            <%= link_to "Previous Lesson", course_lesson_path(@course, @previous_lesson), class: 'btn btn-dark btn-sm'%>
+            <% end %>
+            </div>
     </div>
 
   </div>
- 
-    <br/>
-    <br/>
+</div>
+  </div>
+<div class="col-lg-2"></div>
 
-    <% if  @next_lesson || @course.last_lesson?(@lesson) %>
-        <%=   link_to "Next ", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm'%>
-    <% end %>
-        <% if  @previous_lesson %>
-        <%= link_to "Previous Lesson", course_lesson_path(@course, @previous_lesson), class: 'btn btn-dark btn-sm'%>
-    <% end %>
-</div>   
+</div>
+
+
+
+
