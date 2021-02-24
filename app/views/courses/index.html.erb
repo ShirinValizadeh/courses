@@ -6,8 +6,15 @@
   <div class="row">
 
     <%if @courses.size == 0 %>
-           <h1 class="text-center m-3"> There are No Courses !!! </h1>
-
+        <h1 class="text-center m-3"> There are No Courses !!! </h1>
+        <div class="loader  p-2">
+          <div class="box">
+            <div class="circle"></div>
+          </div>
+          <div class="box">
+            <div class="circle"></div>
+          </div>
+        </div>
     <% else %>         
     <% @courses.each do |course| %>
 

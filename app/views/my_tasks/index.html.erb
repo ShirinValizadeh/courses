@@ -1,57 +1,42 @@
-<p id="notice"><%= notice %></p>
 
 
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="container">
+  <div class="row">
+
+    <% @my_tasks.each do |task| %>
+      <div class="col-sm m-3 hover p-2 position-relative ">  
+        <div class="card shadow-lg  mb-5 bg-body rounded p-2 card-courses b-color" style="width: 18rem; height:300px">
+
+
+          <div class="card-body">
+            <% if task.completed? %>
+            <h5 class="card-title">
+              <%= task.title %>
+              <%= link_to ' ',  my_task_path(task, {  my_task: { completed: false}  }) , class:"bi bi-check-square-fill p-2" %>                      
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill text-success" viewBox="0 0 16 16">
+                <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+                </svg>
+            </h5>
+            <%= link_to 'Delete',  my_task_path(task, {  my_task: { completed: false} }), method: :delete, data: { confirm: 'Are you sure?' } , class:"p-2 m-2 btn text-decoration-none text-danger task-completed-style  position-absolute bottom-0 start-0" %>
+            <%= link_to "Mark as completed", my_task_path(task, {  my_task: { completed: false} }), method: :patch , class:"p-2 m-2 text-decoration-none text-success task-completed-style  position-absolute bottom-0 end-0" %>
+            <% else %>
+
+            <%= task.title  %>
+            <div class="m-1" >
+            <%= link_to "Mark as completed", my_task_path(task, {  my_task: { completed: true} }), method: :patch , class:"p-2 m-2 text-decoration-none text-secondary task-completed-style position-absolute bottom-0 end-0" %>
+            </div>
+            <% end %>            
+          </div>
+          
+          
+
+        </div>
+      </div>
+    <% end %>  
+
   </div>
 </div>
 
 
-
-
-
-
-<h3>My To Do List :</h3>
-
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
- 
-    <% @my_tasks.each do |task| %>
-     <% if task.completed? %>
-      <tr>
-     
-        <td><%= task.title %></td>
-      
-        <td><%= link_to 'Done',  my_task_path(task, {  my_task: { completed: false}  }) , class: "btn btn-success" %></td>
-        <td><%= link_to 'Destroy',  my_task_path(task, {  my_task: { completed: false} }), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td> <%= link_to "Mark as completed", my_task_path(task, {  my_task: { completed: false} }), method: :patch %> </td>
-
-      </tr>
-    <% else %>
-         <tr>
-        <td><%= task.title  %></td>
-        
-        <td> <%= link_to "Mark as completed", my_task_path(task, {  my_task: { completed: true} }), method: :patch %> </td>
-
-      </tr>
-      
-    <% end %>
-
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
+Als Software Entwicklerinn lerne ich jeden Tag neue Dinge. Und pubstage ist die Plattform um mein Wissen zu teilen
 

@@ -16,7 +16,8 @@ gem 'puma', '~> 5.0'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
- gem 'image_processing'
+gem 'image_processing'
+gem "font-awesome-rails"
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]

@@ -13,10 +13,12 @@
  *= require_tree .
  *= require_self
  */
+ 
 
 body{
     font-family: initial;
 }
+
 
 .b-color{
     background-image: linear-gradient(139deg, #d6f3e752 27%, #edfaa852 100%, #ffffff 100%);
@@ -116,3 +118,21 @@ body{
     0%{ transform: rotate(0deg); }
     100%{ transform: rotate(360deg); }
 }
+
+
+
+
+.to-do-style{
+    width: 100%;
+}
+
+
+.task-completed-style {
+    transition: .4s;
+    }
+    .task-completed-style:hover {
+    transition: .4s;
+    background-color: rgba(11, 14, 15, 0.157) ;
+    border-radius: 3px;
+    box-shadow: 5px 10px 18px -6px #888888; 
+    }

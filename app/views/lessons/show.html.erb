@@ -11,9 +11,9 @@
       <div class="row g-0 p-2 m-5">
           <div class="progress  shadow">
             <div class="progress-bar" role="progressbar" 
-            style="width: <%= @course.progress_for(current_user)%>%"
-            aria-valuenow="<%= @course.progress_for(current_user) %>"
-            aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> %             
+              style="width: <%= @course.progress_for(current_user)%>%"
+              aria-valuenow="<%= @course.progress_for(current_user) %>"
+              aria-valuemin="0" aria-valuemax="100"> <%= @course.progress_for(current_user) %> %             
             </div>
           </div>
           <br/>
@@ -25,15 +25,25 @@
               <% if @lesson.id == lesson.id %>
                   <li class="list-group-item">
                     <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset fw-bold fst-italic"  %>  
+                    <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
+                          <i class="bi bi-check2"></i>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 text-success" viewBox="0 0 16 16">
+                          <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                          </svg>
+                  <%end%>
                   </li>
               <% else %>
                   <li class="list-group-item">
                     <%= link_to lesson.title, course_lesson_path(@course, lesson), class: "text-decoration-none text-reset"  %>   
+                    <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
+                        <i class="bi bi-check2"></i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 text-success" viewBox="0 0 16 16">
+                        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                  <%end%>
                   </li>
               <% end %>
-                      <% if current_user.completedlessons.find_by(lesson_id: lesson.id) %>
-                          done
-                  <%end%>
+
               <% end %> 
             </ul>
           </div>
@@ -41,10 +51,16 @@
 
         <div class="col-md-8 p-2">
           <div class="card-body ">
-            <h4 > <%= @course.title %> </h4>
-                <p>  <%= @lesson.title %></p>
+                <h4 > <%= @course.title %> </h4>
+                <p>  <%= @lesson.title %></p>             
+          </div>
+          <div class="card-body ">
+                <h4 > <%= @course.body %> </h4>
+                <p>  <%= @lesson.body %></p>
                 <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
           </div>
+
+
                 <div class="position-absolute bottom-0 end-0 p-2">
                 <% if  @next_lesson || @course.last_lesson?(@lesson) %>
                 <%=   link_to "Next ", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm p-2'%>
