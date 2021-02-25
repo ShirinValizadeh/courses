@@ -1,35 +1,73 @@
 <%= form_with( model: @contact , url: contact_url) do |form| %>
 
-  <h3> Contact Form </h3>
+ 
 <br/>
-  <div class="mb-3">
-  <div class="field form-group">
-    <% form.label :email  %>
-    <%= form.text_field :email ,class:"form-control"  , placeholder:"Email"%>
-  </div>
 
-  </div>
-  <div class="mb-3">
-  <div class="field form-group">
-    <% form.label :subject %>
-    <%= form.text_field :subject ,  class:"form-control" ,placeholder:"Subject" %>
-  </div>
-  </div>
+ <div class="row">
+ <div class="col-lg-1"></div>
+ <div class="col-lg-10 m-5 p-2">
+ 
 
-
-  
-  <div class="mb-3">
-  <div class="field form-group">
-    <% form.label :description %>
-    <%= form.text_area :description ,  class:"form-control" ,placeholder:"Description" %>
+<div class="container p-2">
+<div class="card p-2 b-color shadow-lg">
+ <div class="row p-2">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 text-center p-2">                        
+        <h2>Contact Us</h2>
+    </div>
   </div>
-  </div>
+  <div class="row p-2 d-flex justify-content-center">
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xs-offset-3 ">
 
 
-    <div class="actions">
-    <%= form.submit class:"btn btn-success" %>
+      <div class="p-2 m-3 text-center ">
+        <div class="field form-group ">
+          <% form.label :email  %>
+          <%= form.text_field :email ,class:"form-control"  , placeholder:"Email" %>
+        </div>
+        </div>
+
+        <div class="p-2 m-3">
+        <div class="field form-group">
+          <% form.label :subject %>
+          <%= form.text_field :subject ,  class:"form-control" ,placeholder:"Subject" %>
+        </div>
+        </div>
+
+        <div class="p-2 m-3">
+        <div class="field form-group">
+          <% form.label :description %>
+          <%= form.text_area :description ,rows:"5", cols:"50"  ,class:"form-control" ,placeholder:"Message..."  %>
+        </div>
+        </div>
+
+            <div class="actions text-center p-2 m-3">
+            <%= form.submit class:"btn btn-outline-dark " %>
+            </div>
+
+
+      </div>
+    </div>
+
+ </div>
+</div>
+
+ </div>
+ <div class="col-lg-1"></div>
   </div>
+
+
+
+
+
+
+ 
+
+
+ 
   </div>
 
 
 <% end %>
+
+
+
