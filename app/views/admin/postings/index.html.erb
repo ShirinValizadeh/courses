@@ -1,9 +1,10 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Postings</h1>
 
-<table>
-  <thead>
+<br/>
+
+<table class="table table-hover">
+  <thead class="table-success">
+<br/>
     <tr>
       <th>Title</th>
       <th>Description</th>
@@ -16,9 +17,9 @@
       <tr>
         <td><%= posting.title %></td>
         <td><%= posting.description %></td>
-        <td><%= link_to 'Show', admin_posting_path(posting) %></td>
-        <td><%= link_to 'Edit', edit_admin_posting_path(posting) %></td>
-        <td><%= link_to 'Destroy', admin_posting_path(posting), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', admin_posting_path(posting) ,class: "btn btn-outline-dark btn-sm" %></td>
+        <td><%= link_to 'Edit', edit_admin_posting_path(posting) , class: "btn btn-outline-dark btn-sm" %></td>
+        <td><%= link_to 'Destroy', admin_posting_path(posting), method: :delete, data: { confirm: 'Are you sure?' } ,class: "btn btn-outline-danger btn-sm" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +27,4 @@
 
 <br>
 
-<%= link_to 'New Posting', new_admin_posting_path %>
+<%= link_to 'New Posting', new_admin_posting_path , class:"btn btn-dark" %>

@@ -1,7 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-light b-navbar-color " >
   <div class="container-fluid">
   <%= link_to 'Home', root_path , class:'navbar-brand' %>
-   
+
+
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,47 +11,44 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
    
         <li class="nav-item">
-             <%= link_to 'About Us', about_path , class:'nav-link' %>
+             <%= link_to 'About Us', about_path , class:"nav-link  #{'active' if controller_name == 'abouts'}" %>
         </li>
  
         <li class="nav-item">
-             <%= link_to 'Contact Form', new_contact_path , class:'nav-link' %>
+             <%= link_to 'Contact Form', new_contact_path , class:"nav-link #{'active' if controller_name == 'contacts'}" %>
         </li>
    
         <li class="nav-item">
-             <%= link_to 'Courses', courses_path , class:'nav-link' %>
+             <%= link_to 'Courses', courses_path , class:"nav-link #{'active' if controller_name == 'courses'}" %>
         </li>
         
-        <li class="nav-item">
-             <%= link_to 'Postings', postings_path , class:'nav-link' %>
-        </li>
        
 
         <% if user_signed_in? %>
 
           <li class="nav-item">
-             <%= link_to 'Tasks', tasks_path , class:'nav-link' %>
+             <%= link_to 'Tasks', tasks_path , class:"nav-link #{'active' if controller_name == 'tasks'}" %>
           </li>
 
 
           <li class="nav-item">
-             <%= link_to 'My Tasks', my_tasks_path , class:'nav-link' %>
+             <%= link_to 'My Tasks', my_tasks_path , class:"nav-link #{'active' if controller_name == 'my_tasks'}" %>
           </li>
 
            <% if current_user.admin? %>
             <li class="nav-item">
-              <%= link_to 'Admin Postings', admin_postings_path , class:'nav-link' %>
+              <%= link_to 'Admin Postings', admin_postings_path , class:"nav-link #{'active' if controller_name == 'postings'}" %>
             </li>
 
             <li class="nav-item">     
-              <%= link_to 'Add Posting', new_admin_posting_path , class:'nav-link' %>
+              <%= link_to 'Add Posting', new_admin_posting_path , class:"nav-link #{'active' if controller_name == ''}" %>
             </li>
               
           <% end %>
 
           <% if current_user.author? %>
             <li class="nav-item">
-              <%= link_to 'Author Courses', author_courses_path , class:'nav-link' %>
+              <%= link_to 'Author Courses', author_courses_path , class:"nav-link #{'active' if controller_name == ' courses'}" %>
             </li>
 
             <li class="nav-item">     
@@ -71,14 +70,27 @@
           </li>
 
           <li class="nav-item">
-            <%= link_to 'Sign In ' ,  new_user_session_path, class:"nav-link" %>
+            <%= link_to 'Sign In ' ,  new_user_session_path, class:"nav-link " %>
           </li>
         <% end %>
       </ul>
+             <button class="bi bi-bell-fill m-1" data-bs-toggle="modal" data-bs-target="#exampleModal" >
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bell-fill" viewBox="0 0 16 16">
+              <path d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z"/>
+              </svg>
+            </button>
       <form class="d-flex">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-dark" type="submit">Search</button>
       </form>
+      
     </div>
   </div>
+
+
+
+
 </nav>
+
+
+

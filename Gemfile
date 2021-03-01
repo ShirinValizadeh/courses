@@ -41,6 +41,7 @@ group :development do
   gem 'rubocop', require: false
   gem 'rubocop-rails_config'
   gem 'spring'
+  gem 'letter_opener_web', '~> 1.0'
 
 end
 

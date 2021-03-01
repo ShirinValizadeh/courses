@@ -16,9 +16,13 @@
  
 
 body{
-    font-family: initial;
+    font-family: 'Lato', sans-serif;
 }
 
+.text-shadow {
+
+    text-shadow: 2px 2px 4px #000000;
+  }
 
 .b-color{
     background-image: linear-gradient(139deg, #d6f3e752 27%, #edfaa852 100%, #ffffff 100%);
@@ -60,10 +64,11 @@ body{
 .loader .box{
     background-color: rgba(0,0,0,0.04);
     border: 4px solid transparent;
-    border-left: 4px solid #26ff00;
-    border-top: 4px solid #26ff00;
-    border-radius: 50%;
-    box-shadow: 0 0 15px rgba(0,0,0,0.03);
+    border-left: 4px solid #dc3545;
+    border-top: 4px solid  #dc3545;
+    /* border-radius: 50%; */
+    /* box-shadow: 0 0 15px rgba(0,0,0,0.03); */
+    box-shadow: 0 0 30px 6PX rgb(191 153 155 / 32%);
     position: absolute;
     top: 0;
     left: 0;
@@ -74,8 +79,8 @@ body{
 .loader .box:nth-of-type(2){
     background-color: rgba(0, 0, 0, 0.025);
     border: 4px solid transparent;
-    border-right: 4px solid #03a9f4;
-    border-bottom: 4px solid #03a9f4;
+    border-right: 4px solid  #ffc107;
+    border-bottom: 4px solid  #ffc107;
     top: 30px;
     left: 30px;
     right: 30px;
@@ -105,12 +110,12 @@ body{
     right: -6px;
 }
 .loader .box .circle:before{
-    background: #26ff00;
+    background:  #dc3545;;
     box-shadow: 0 0 20px #26ff00, 0 0 40px #26ff00, 0 0 60px #26ff00, 0 0 80px #26ff00,
                 0 0 100px #26ff00, 0 0 0 5px rgba(255, 255, 0, .1);
 }
 .loader .box:nth-of-type(2) .circle:before{
-    background: #2db9ff;
+    background: #ffc107;;
     box-shadow: 0 0 20px #2db9ff, 0 0 40px #2db9ff, 0 0 60px #2db9ff, 0 0 80px #2db9ff,
                 0 0 100px #2db9ff, 0 0 0 5px rgba(3, 169, 244, .1);
 }

@@ -14,6 +14,8 @@ class ContactsController < ApplicationController
         @contact = Contact.new(contact_params)
       
           if @contact.save
+            UserMailer.with(contact: @contact).welcome_email.deliver
+
            redirect_to root_url, notice: 'contact was successfully .' 
   
           else

@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   
-  
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   
   resources :tasks
   devise_for :users
@@ -28,12 +28,13 @@ Rails.application.routes.draw do
   # /courses
   # /courses/:id
   resources :courses, only: %i[index show] do
+  
+
     resources :completedlessons    
     resources :lessons, only: %i[index show]
     resources :enrollments, only: [:create]
  end
-  resources :postings, only: %i[index ] 
- 
+ resources :postings, only: %i[index ] 
   resources :finished_courses, only: %i[show ] 
 
   

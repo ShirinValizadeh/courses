@@ -71,7 +71,7 @@ class PostingsController <  BaseController
 
     # Only allow a list of trusted parameters through.
     def posting_params
-      params.require(:posting).permit(:title, :body)
+      params.require(:posting).permit(:title, :description)
     end
 end
 

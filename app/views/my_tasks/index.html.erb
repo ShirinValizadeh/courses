@@ -2,7 +2,17 @@
 
 <div class="container">
   <div class="row">
-
+        <%if @my_tasks.size == 0 %>
+        <h1 class="text-center m-3 text-shadow"> There are No Tasks For You !!! </h1>
+        <div class="loader  p-2">
+          <div class="box">
+            <div class="circle"></div>
+          </div>
+          <div class="box">
+            <div class="circle"></div>
+          </div>
+        </div>
+    <% else %> 
     <% @my_tasks.each do |task| %>
       <div class="col-sm m-3 hover p-2 position-relative ">  
         <div class="card shadow-lg  mb-5 bg-body rounded p-2 card-courses b-color" style="width: 18rem; height:300px">
@@ -32,11 +42,11 @@
 
         </div>
       </div>
-    <% end %>  
+    <% end %> 
+    <% end %> 
+
 
   </div>
 </div>
 
-
-Als Software Entwicklerinn lerne ich jeden Tag neue Dinge. Und pubstage ist die Plattform um mein Wissen zu teilen
 
