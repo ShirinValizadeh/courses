@@ -42,6 +42,9 @@ group :development do
   gem 'rubocop-rails_config'
   gem 'spring'
   gem 'letter_opener_web', '~> 1.0'
+  gem 'inky-rb', require: 'inky'
+  # Stylesheet inlining for email
+  gem 'premailer-rails'
 
 end
 

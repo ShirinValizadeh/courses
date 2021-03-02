@@ -1,0 +1,48 @@
+
+
+
+        <div class="container"  style= "position: relativ;">
+
+            <div class="col-lg-8 m-5 p-2" style= "position: absolute; left:38%">
+                <h3>  <%= @user.email %> , You have successfully Enrolled. </h3>
+                <p style="color: #000000ab;"> To see the Course, just follow this link:</p>
+                
+                    <form action="<%= course_url(@course) %>">
+                        <input type="submit" value="Go to Course" />
+                    </form>
+                  
+                <p style="color: #000000ab;">Thanks for joining and have a great day!</p>
+            </div>
+
+        </div>
+
+
+<container>
+  <row>
+    <columns>
+      <p>
+        <%= t Hello ,  <%= @user.email %> %>
+      </p>
+
+      <p>
+        <%= t You have successfully Enrolled. To see the Course, just click here : %>
+      </p>
+
+      <spacer size="32"></spacer>
+
+      <center>
+        <button href="<%= course_url(@course) %>" class="large rounded">
+        </button>
+      </center>
+
+      <spacer size="32"></spacer>
+
+      <p>
+        Thanks for joining and have a great day!
+      </p>
+
+
+
+    </columns>
+  </row>
+</container>
