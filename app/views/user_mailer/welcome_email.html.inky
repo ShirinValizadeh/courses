@@ -11,11 +11,13 @@
    
     <columns>
          
+        <center>
         
-      
-        <h4 class="text-center">
-           Course App !!!
-        </h4>              
+          <button href="#" class="warning radius " >
+                Courses App !!!
+          </button>
+        </center>
+            
       
         <spacer size="24"></spacer>
 
@@ -25,10 +27,7 @@
               <row>
                 <columns >      
                   <p>
-                      You have successfully send Your MSG
-                  </p>
-                  <p>
-                      Thanks for joining and have a great day!
+                      You send successfully Your MSG.Thanks for joining and have a great day!
                   </p>
                 </columns>
               </row>
@@ -41,12 +40,12 @@
             <container>
               <row>
                 <columns >  
+                        <spacer size="24"></spacer>                       
                     <center>
-                        <spacer size="24"></spacer>
-                       
-                          <%= render "layouts/mini_footer_mailer" %>
-                         
+                          <%= render "layouts/mini_footer_mailer" %>                         
                     </center>
+                        <spacer size="24"></spacer>                       
+
                 </columns>
               </row>
             </container> 

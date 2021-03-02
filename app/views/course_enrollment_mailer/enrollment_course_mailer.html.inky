@@ -5,9 +5,14 @@
    
     <columns>
          
-        <h4 class="text-center">
-            Courses App !!!
-        </h4>
+        <center>
+        
+          <button href="#" class="warning radius " > LOGO!</button>  
+
+              
+          
+        </center>
+
         <spacer size="24"></spacer>
         
         <p>
@@ -42,6 +47,7 @@
                     <center>
                         <spacer size="24"></spacer>
                         <%= render "layouts/mini_footer_mailer" %>
+                        <spacer size="24"></spacer>
                     </center>
                 </columns>
             </row>

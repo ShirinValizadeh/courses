@@ -62,10 +62,11 @@ body{
     position: relative;
 }
 .loader .box{
-    background-color: rgba(0,0,0,0.04);
+    /* background-color: rgba(0,0,0,0.04); */
+    background-color: rgb(0 0 0 / 88%);
     border: 4px solid transparent;
-    border-left: 4px solid #dc3545;
-    border-top: 4px solid  #dc3545;
+    /* border-left: 4px solid #dc3545;
+    border-top: 4px solid  #dc3545; */
     /* border-radius: 50%; */
     /* box-shadow: 0 0 15px rgba(0,0,0,0.03); */
     box-shadow: 0 0 30px 6PX rgb(191 153 155 / 32%);
@@ -74,18 +75,19 @@ body{
     left: 0;
     right: 0;
     bottom: 0;
-    animation: animate1 3s linear infinite;
+    animation: animate1 10s linear infinite;
 }
 .loader .box:nth-of-type(2){
-    background-color: rgba(0, 0, 0, 0.025);
+    /* background-color: rgba(0, 0, 0, 0.025); */
+    background-color: rgb(248 176 175);
     border: 4px solid transparent;
-    border-right: 4px solid  #ffc107;
-    border-bottom: 4px solid  #ffc107;
+    /* border-right: 4px solid  #ffc107;
+    border-bottom: 4px solid  #ffc107; */
     top: 30px;
     left: 30px;
     right: 30px;
     bottom: 30px;
-    animation: animate1 3s reverse linear infinite;
+    animation: animate1 10s reverse linear infinite;
 }
 .loader .box .circle{
     transform-origin: left;
@@ -110,14 +112,14 @@ body{
     right: -6px;
 }
 .loader .box .circle:before{
-    background:  #dc3545;;
-    box-shadow: 0 0 20px #26ff00, 0 0 40px #26ff00, 0 0 60px #26ff00, 0 0 80px #26ff00,
-                0 0 100px #26ff00, 0 0 0 5px rgba(255, 255, 0, .1);
+    /* background:  #dc3545;; */
+    /* box-shadow: 0 0 20px #26ff00, 0 0 40px #26ff00, 0 0 60px #26ff00, 0 0 80px #26ff00,
+                0 0 100px #26ff00, 0 0 0 5px rgba(255, 255, 0, .1); */
 }
 .loader .box:nth-of-type(2) .circle:before{
-    background: #ffc107;;
-    box-shadow: 0 0 20px #2db9ff, 0 0 40px #2db9ff, 0 0 60px #2db9ff, 0 0 80px #2db9ff,
-                0 0 100px #2db9ff, 0 0 0 5px rgba(3, 169, 244, .1);
+    /* background: #ffc107;; */
+    /* box-shadow: 0 0 20px #2db9ff, 0 0 40px #2db9ff, 0 0 60px #2db9ff, 0 0 80px #2db9ff,
+                0 0 100px #2db9ff, 0 0 0 5px rgba(3, 169, 244, .1); */
 }
 @keyframes animate1{
     0%{ transform: rotate(0deg); }
