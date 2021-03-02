@@ -1,14 +1,30 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @posting.title %>
-</p>
+<div class="row">
+<div class="col-lg-2"></div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @posting.description %>
-</p>
+<div class="col-lg-8 m-5 p-2">
+  <div class="container p-2">
 
-<%= link_to 'Edit', edit_admin_posting_path(@posting) %> |
-<%= link_to 'Back', admin_postings_path %>
+<div class="card p-2 b-color" style="max-width: 640px;">
+
+  <div class="card-body p-2">
+    <h5 class="card-title">Post Title : </h5>
+    <p class="card-text p-2"> <%= @posting.title %></p>
+       <h5 class="card-title">Description: </h5>
+    <p class="card-text p-2">   <%= @posting.description %></p>
+
+    <%= link_to 'Edit', edit_admin_posting_path(@posting), class:"btn btn-dark p-2"%> |
+    <%= link_to 'Back',admin_postings_path , class:"btn btn-dark p-2"%> 
+  </div>
+
+</div>
+
+
+
+  </div>
+</div>
+<div class="col-lg-2"></div>
+</div>
+
+
+
