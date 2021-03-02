@@ -3,13 +3,60 @@
 
   <body>
 
-    <p>
-      You have successfully signed up to example.com,
 
-    </p>
-    <p>
 
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+<container>
+
+  <row>
+   
+    <columns>
+         
+        
+      
+        <h4 class="text-center">
+           Course App !!!
+        </h4>              
+      
+        <spacer size="24"></spacer>
+
+        </wrapper>
+          <wrapper class="main">
+            <container>
+              <row>
+                <columns >      
+                  <p>
+                      You have successfully send Your MSG
+                  </p>
+                  <p>
+                      Thanks for joining and have a great day!
+                  </p>
+                </columns>
+              </row>
+            </container> 
+          <wrapper/>
+        </wrapper>
+
+        </wrapper>
+          <wrapper class="footer">
+            <container>
+              <row>
+                <columns >  
+                    <center>
+                        <spacer size="24"></spacer>
+                       
+                          <%= render "layouts/mini_footer_mailer" %>
+                         
+                    </center>
+                </columns>
+              </row>
+            </container> 
+          <wrapper/>
+        </wrapper>
+
+    </columns>
+  </row>
+</container>
+
+
   </body>
 </html>
