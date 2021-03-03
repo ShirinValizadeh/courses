@@ -69,7 +69,7 @@ module Author
         delete author_course_url(@course)
       end
 
-      assert_redirected_to courses_url
+      assert_redirected_to author_courses_url
     end
   end
 end

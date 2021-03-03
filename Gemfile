@@ -25,7 +25,7 @@ group :development, :test do
   gem 'faker'
   gem "solargraph"
   gem 'mail_form'
- 
+ gem 'foundation_emails'
 
  
 end

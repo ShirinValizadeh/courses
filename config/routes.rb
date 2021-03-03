@@ -2,6 +2,8 @@
 
 Rails.application.routes.draw do
   
+  default_url_options :host => "example.com"
+  
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   
   resources :tasks
@@ -47,3 +49,4 @@ Rails.application.routes.draw do
   # get 'home/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
+
