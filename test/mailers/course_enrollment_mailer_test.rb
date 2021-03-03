@@ -15,9 +15,9 @@ class CourseEnrollmentMailerTest < ActionMailer::TestCase
     # Test the body of the sent email contains what we expect it to
     assert_equal ["shirinvalizadeh6004@gmail.com"], email.from
     assert_equal [user.email], email.to
-    assert_match "http://localhost:3000/courses#{course}", email.to_s
+    assert_match "http://localhost:3000/courses#{course}", email.parts.last.to_s
 
-    
+    #p email.body
   
   end
 end
