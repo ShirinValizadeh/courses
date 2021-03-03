@@ -38,7 +38,8 @@ Rails.application.routes.draw do
   resources :finished_courses, only: %i[show ] 
 
   
-  get 'about', to: 'about#index'
+  #get 'about', to: 'about#index'
+  resource :about
   resource :contact
   resources :my_tasks
   
