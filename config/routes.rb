@@ -2,7 +2,7 @@
 
 Rails.application.routes.draw do
   
-  default_url_options :host => "example.com"
+
   
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   
@@ -39,6 +39,11 @@ Rails.application.routes.draw do
  resources :postings, only: %i[index ] 
   resources :finished_courses, only: %i[show ] 
 
+
+  get "password/reset", to: "password_resets#new"
+  post "password/reset", to: "password_resets#create"
+  get "password/reset/edit", to: "password_resets#edit"
+  patch "password/reset/edit", to: "password_resets#update"
   
   #get 'about', to: 'about#index'
   resource :about

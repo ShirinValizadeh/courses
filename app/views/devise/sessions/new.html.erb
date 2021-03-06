@@ -15,6 +15,7 @@
   <div class="field form-group">
     <% f.label :password %><br />
     <%= f.password_field :password ,autocomplete: "current-password" ,class:"form-control" , placeholder:'Password' %>
+    <%= link_to "forgot your password" , password_reset_path%>
   </div>
 <br/>
   <% if devise_mapping.rememberable? %>

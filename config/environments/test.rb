@@ -62,4 +62,7 @@ Rails.application.configure do
 
   # factory_bot raises Factory :user not registered error
   config.factory_bot.definition_file_paths = ['test/factories']
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
 end
