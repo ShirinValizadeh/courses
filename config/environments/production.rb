@@ -129,9 +129,4 @@ Rails.application.configure do
    config.action_mailer.default_url_options = { host: 'course-app-rails.herokuapp.com' }
 
 
-   Raven.configure do |config|
-    config.dsn = ENV["SENTRY_IO_DSN"]
-  end
-
-  config.exceptions_app = self.routes
 end
