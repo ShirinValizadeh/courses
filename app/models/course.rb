@@ -4,12 +4,14 @@ class Course < ApplicationRecord
   belongs_to :user
   has_many :lessons, dependent: :destroy
   has_many :coursenrollments, dependent: :destroy
-  validates :title, presence: true
+  
   has_one_attached :image
 
   has_rich_text :body
 
+  validates :title, presence: true
   validates :description, length: { maximum: 200 }
+ # validates :publish, presence: false
 
   delegate :count, to: :lessons, prefix: true
 
