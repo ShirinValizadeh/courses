@@ -1,21 +1,21 @@
 
-<div class="card">
-  <div class="card-header">
-    <h2>Log in</h2>
+
+  <div class="card-header mt-5 p-2">
+    <h4>Log in</h4>
   </div>
-  <div class="card-body">
+  <div class="card-body p-2">
   
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field form-group">
+  <div class="field form-group p-2">
     <% f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" ,class:"form-control" , placeholder:'Email' %>
   </div>
 
-  <div class="field form-group">
+  <div class="field form-group p-2">
     <% f.label :password %><br />
     <%= f.password_field :password ,autocomplete: "current-password" ,class:"form-control" , placeholder:'Password' %>
-    <%= link_to "forgot your password" , password_reset_path%>
+    <%= link_to "forgot your password" , password_reset_path , class:"p-2"%>
   </div>
 <br/>
   <% if devise_mapping.rememberable? %>
@@ -26,11 +26,12 @@
   <% end %>
 
   <div class="actions">
-    <%= f.submit "Log in" , class:'btn btn-success' %>
+    <%= f.submit "Log in" , class:'btn btn-success p-2 m-3' %>
   </div>
 <% end %>
   </div>
-</div>
+
+
 
 
 <br/>

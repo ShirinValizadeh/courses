@@ -1,14 +1,15 @@
-<h1>forgot your password </h1>
-
+<div class="p-2 mt-5">
+<h4>Forgot your password : </h4>
+</div>
 <%= form_with url: password_reset_path do |form|%>
 
   <div class="field form-group">
    
-    <%= form.email_field :email ,class:"form-control" , placeholder:'Email' %>
+    <%= form.email_field :email ,class:"form-control" , placeholder:'Email ...' %>
   </div>
 <br/>
     <div class="mb-3">
-        <%= form.submit "reset Password" %>
+        <%= form.submit "Reset Password", class:"btn bg-success" %>
     </div>
 
 <% end %>
