@@ -19,6 +19,7 @@ gem 'webpacker', '~> 5.0'
 gem 'image_processing'
 gem "font-awesome-rails"
 
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot_rails'
@@ -42,6 +43,7 @@ group :development do
   gem 'rubocop-rails_config'
   gem 'spring'
   gem 'letter_opener_web', '~> 1.0'
+ 
 end
 
 group :test do
@@ -58,3 +60,4 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'inky-rb', require: 'inky'
 # Stylesheet inlining for email
 gem 'premailer-rails'
+ gem "aws-sdk-s3", require: false
