@@ -4,11 +4,7 @@ module Author
   class CoursesController < BaseController
     before_action :set_course, only: %i[show edit update destroy]
 
-    if Rails.env.production?
-      storage :fog 
-     else
-      storage :file 
-    end
+  
 
 
     # GET /courses
