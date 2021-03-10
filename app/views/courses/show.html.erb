@@ -1,72 +1,20 @@
+
 <div class="row">
+
 <div class="col-lg-4">
-  <div class="container p-2">
-
+<div class="container p-2">
     <div class="  p-2 " style="max-width: 740px;">
-      <div class="row g-0 p-2">       
-          <% if @course.image.representable? %>
-          <%= image_tag @course.image.representation(resize_to_limit: [300, 200]) , class: "img-cours-id" %>
-          <% end %>     
-      </div>
-
-      <div class="row g-0 p-2">      
-          <div class="card-body">
-            <h5 class="card-title text-capitalize"><%= @course.title %></h5>
-            <p class="card-text"><%= @course.description %></p>
-            <%#Published: <%= @course.published %>
-          </div>
-      </div>
-
-      <div class="row g-0 p-2">
-          <div class="card-body p-2">
-            <% if @course.enrolled?(current_user) %>
-            
-            <table class="table ">
-                  <% @course.lessons.each do |lesson| %>
-                          <tr>
-                            <td>
-                                <%= link_to lesson.title, course_lesson_path(@course, lesson),  class: "text-decoration-none text-reset text-capitalize" %>
-                            </td>
-                          </tr>
-                  <% end %>
-                     
-                          <tr>
-                            <td>
-                              <%= link_to 'Auth' , course_teacher_path(@course) , class:"text-decoration-none text-reset" %> 
-
-                            </td>
-                          </tr>
-                           <tr>
-                            <td>
-                              Rating 
-                            </td>
-                          </tr>     
-            </table>
-
-            <% else %>
-                <%= form_with(url: course_enrollments_path(@course)) do |form| %>
-                <%= form.submit "Enroll", class:"btn btn-success shadow-lg " %>
-            <% end %>
-
-            <% end %>
-       
-
-          </div>
-      </div>    
-    </div>
-    <br/>
-    <br/>
-
-
-
-    <%= link_to 'Back', courses_path , class: 'btn btn-dark btn-sm' %>
-
-  </div>
+        <%= render 'layouts/course_sidebar'%>
+</div>
 </div>
 
-<div class="col-lg-7 m-5 p-2">
-      
 </div>
-<div class="col-lg-1"></div>
+
+<div class="col-lg-6 m-5 p-2">
+
+
+</div>
+<div class="col-lg-2"></div>
+
 </div>
 

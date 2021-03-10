@@ -1,0 +1,39 @@
+
+
+
+<div class="row">
+
+<div class="col-lg-4">
+<div class="container p-2">
+    <div class="  p-2 " style="max-width: 740px;">
+        <%= render 'layouts/course_sidebar'%>
+</div>
+</div>
+
+</div>
+
+<div class="col-lg-6 m-5 p-2">
+<h4> Title</h4>
+
+<hr/>
+<h4 class="text-shadow p-2">
+<%= @lesson.title%>
+</h4>
+<p>
+The term content knowledge refers to the body of knowledge and information that teachers teach and that students are expected to learn in a given subject or content area, such as English language arts, mathematics, science, or social studies.
+</p>
+<p class="card-text p-2"><small class="text-muted">Last updated 3 mins ago</small></p>
+<%= link_to  "Show Lesson" , course_lesson_path(@course, @lesson), class: 'btn btn-success btn-sm p-2'%>
+
+</div>
+<div class="col-lg-2"></div>
+
+</div>
+
+
+
+
+
+
+
+   

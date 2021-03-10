@@ -30,10 +30,13 @@ Rails.application.routes.draw do
   # /courses
   # /courses/:id
   resources :courses, only: %i[index show] do
+  resources :content_lessons, only: %i[show ]
+
    resource :teacher, only: %i[show ]
 
     resources :completedlessons    
     resources :lessons, only: %i[index show]
+
     resources :enrollments, only: [:create]
  end
  resources :postings, only: %i[index ] 

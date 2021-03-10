@@ -22,7 +22,7 @@
                   <% @course.lessons.each do |lesson| %>
                           <tr>
                             <td>
-                                <%= link_to lesson.title, course_lesson_path(@course, lesson),  class: "text-decoration-none text-reset text-capitalize" %>
+                                <%= link_to lesson.title, course_content_lesson_path(@course,lesson),  class: "text-decoration-none text-reset text-capitalize" %>
                             </td>
                           </tr>
                   <% end %>
