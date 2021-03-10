@@ -57,7 +57,7 @@ module Author
     end
 
     def lesson_params
-      params.require(:lesson).permit(:title, :body)
+      params.require(:lesson).permit(:title, :body )
     end
   end
 end

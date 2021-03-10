@@ -1,8 +1,5 @@
-<div class="row">
-<div class="col-lg-4">
-  <div class="container p-2">
 
-    <div class="  p-2 " style="max-width: 740px;">
+
       <div class="row g-0 p-2">       
           <% if @course.image.representable? %>
           <%= image_tag @course.image.representation(resize_to_limit: [300, 200]) , class: "img-cours-id" %>
@@ -53,7 +50,7 @@
 
           </div>
       </div>    
-    </div>
+ 
     <br/>
     <br/>
 
@@ -61,12 +58,4 @@
 
     <%= link_to 'Back', courses_path , class: 'btn btn-dark btn-sm' %>
 
-  </div>
-</div>
-
-<div class="col-lg-7 m-5 p-2">
-      
-</div>
-<div class="col-lg-1"></div>
-</div>
 
