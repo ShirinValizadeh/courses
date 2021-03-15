@@ -65,7 +65,7 @@
 
                 <div class="position-absolute bottom-0 end-0 p-2">
                 <% if  @next_lesson || @course.last_lesson?(@lesson) %>
-                <%=   link_to "Next ", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm p-2'%>
+                <%=   link_to "Next", course_completedlessons_path(@course, lesson_id: @lesson.id), method: :post , class: 'btn btn-secondary btn-sm p-2'%>
                 <% end %>
                 <% if  @previous_lesson %>
                 <%= link_to "Previous Lesson", course_lesson_path(@course, @previous_lesson), class: 'btn btn-dark btn-sm p-2'%>
