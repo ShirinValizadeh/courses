@@ -1,0 +1,50 @@
+<%= form_with(model: course_rating) do |form| %>
+  <% if course_rating.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(course_rating.errors.count, "error") %> prohibited this course_rating from being saved:</h2>
+
+      <ul>
+        <% course_rating.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+
+
+<div class="card" style="max-width: 400px;">
+
+  <%= image_tag("star.jpg") %>
+
+
+  <div class="card-body">
+     <div class="mb-3">
+        <div class="field form-group">
+            <%= form.label :Course %> :
+
+            <%= form.collection_select :course_id, Course.order(:title), :id, :title  , class:"p-2"   %>
+        </div>
+      </div>
+  </div>
+
+  <div class="card-body">
+      <div class="mb-3">
+        <div class="field form-group">
+                <%= form.label :rating %> :
+                <%= form.number_field :rating ,placeholder:"(1-5)" %>
+        </div>
+      </div>
+  </div>
+
+    <div class="mb-3">
+      <div class="actions p-2">
+        <%= form.submit class:"btn bg-info" %>
+      </div>
+    </div>
+</div>
+
+
+<% end %>

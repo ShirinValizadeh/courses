@@ -4,3 +4,7 @@ amazon:
   secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
   region: eu-central-1
   bucket: <%= ENV['AWS_BUCKET'] %>
+
+local:
+  service: Disk
+  root: <%= Rails.root.join('storage') %>

@@ -33,6 +33,15 @@ body{
     background-color: rgba(14, 8, 6, 0.979);
     
 }
+
+.btn-feedback{
+    position: absolute;
+    bottom: 15%;
+    right: 50%;
+
+}
+
+
 .fon{
     color: white;
 }

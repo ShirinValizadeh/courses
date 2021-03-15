@@ -4,7 +4,7 @@ class Course < ApplicationRecord
   belongs_to :user
   has_many :lessons, dependent: :destroy
   has_many :coursenrollments, dependent: :destroy
-  
+  has_many :course_ratings
   has_one_attached :image
 
   has_rich_text :body
@@ -42,5 +42,12 @@ class Course < ApplicationRecord
     number = ((completed_lessons_count.to_f / total_lessons_count.to_f) * 100.0).to_i
     [number, 100].min
 
+  end
+
+
+
+  def average_rating
+    course_ratings.all.average(:rating).to_i
+    
   end
 end

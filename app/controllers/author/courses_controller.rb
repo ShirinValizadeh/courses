@@ -31,6 +31,7 @@ module Author
       @course = current_user.courses.build(course_params)
       @course.user = current_user
         if @course.save
+         
          redirect_to author_courses_url, notice: 'Course was successfully created.'
         else
          render :new    
