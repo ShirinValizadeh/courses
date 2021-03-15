@@ -6,31 +6,20 @@
 
     <div class="row">
 
-        <div class="col-md-6 p-2 position-relative">
+        <div class="col-md-5 p-2 position-relative mt-5">
             <div class="container p-2 position-absolute top-50 start-50 translate-middle">
-                <div class="p-2 m-5">
-                    <h6  class=" lh-lg font-monospace">
-                        It’s not an easy or natural task, asking for someone’s opinion or evaluation of you and your work,
-                        but it’s an essential part of career development. We can’t promise that it will be painless,
-                        but with the proper preparation and the right questions, asking for feedback can be a smooth process.
-                    </h6>
-               </div>
+                 <%= render 'course_ratings/form' , course_rating: @course_rating%>
             </div>
-                 <%= render %>
-        
         </div>
 
+        <div class="col-md-2 "></div>  
+            
 
 
-
-        <div class="col-md-6 p-2">  
+        <div class="col-md-5 p-2">  
             <div class="container p-2" >
                 <%= image_tag("done.svg") %>
             </div>
         </div>
-
-
-
-
 
     </div>

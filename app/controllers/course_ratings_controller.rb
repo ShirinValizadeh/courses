@@ -1,6 +1,6 @@
 class CourseRatingsController < ApplicationController
   before_action :set_course_rating, only: %i[ show edit update destroy ]
-
+  before_action :set_course
 
 
   def index
@@ -20,31 +20,23 @@ class CourseRatingsController < ApplicationController
   end
 
 
-
-
-
   def create
     @course_rating = CourseRating.new(course_rating_params)
       if @course_rating.save     
-        #CourseFeedbackContext.average_rating   
-        #CourseRating.all.average(:rating).to_i
-        redirect_to @course_rating, notice: "Course rating was successfully created."   
+
+        redirect_to @course, notice: "Course rating was successfully created."   
       else
-        render :new 
-     
-    
+        render :new   
     end
   end
 
+  
   def update
-    respond_to do |format|
       if @course_rating.update(course_rating_params)
-     redirect_to @course_rating, notice: "Course rating was successfully updated." 
-    
+     redirect_to @course, notice: "Course rating was successfully updated."     
       else
        render :edit 
-      
-      end
+ 
     end
   end
 
@@ -63,6 +55,9 @@ class CourseRatingsController < ApplicationController
       @course_rating = CourseRating.find(params[:id])
     end
 
+    def set_course
+      @course = Course.find(params[:id])
+    end
 
    
     def course_rating_params

@@ -27,7 +27,9 @@
           <div class="card-body">
             <h5 class="card-title p-2 m-0 "><%= course.title %> </h5>
             <p class="card-text p-2"><%= course.description %></p>
-            <%#Published: <%= course.published  %>         
+            <%#Published: <%= course.published  %>    
+            <%= render 'layouts/course_rating' , course: @course%>
+
           </div>       
               <%= link_to 'Show', course ,class: "btn btn-dark" %>      
         </div>

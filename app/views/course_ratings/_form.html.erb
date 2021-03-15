@@ -1,37 +1,27 @@
 <%= form_with(model: course_rating) do |form| %>
-  <% if course_rating.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(course_rating.errors.count, "error") %> prohibited this course_rating from being saved:</h2>
 
-      <ul>
-        <% course_rating.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
+
+   <div class="p-2">
+   <h4 class="text-center">Share with us your feedback !!!</h4>
+      <p  class=" lh-lg font-monospace">
+       It’s not an easy or natural task, asking for someone’s opinion or evaluation of you and your work,
+       but it’s an essential part of career development. We can’t promise that it will be painless,
+       but with the proper preparation and the right questions, asking for feedback can be a smooth process.
+      </p>
     </div>
-  <% end %>
-
-
-
-
-
-<div class="card" style="max-width: 400px;">
-
-  <%= image_tag("star.jpg") %>
 
 
   <div class="card-body">
-     <div class="mb-3">
+     <div class="mb-2">
         <div class="field form-group">
             <%= form.label :Course %> :
-
             <%= form.collection_select :course_id, Course.order(:title), :id, :title  , class:"p-2"   %>
         </div>
       </div>
   </div>
 
   <div class="card-body">
-      <div class="mb-3">
+      <div class="mb-2">
         <div class="field form-group">
                 <%= form.label :rating %> :
                 <%= form.number_field :rating ,placeholder:"(1-5)" %>
@@ -40,11 +30,11 @@
   </div>
 
     <div class="mb-3">
-      <div class="actions p-2">
-        <%= form.submit class:"btn bg-info" %>
+      <div class="actions p-2 text-center">
+        <%= form.submit "Feedback" ,class:"btn bg-success" %>
       </div>
     </div>
-</div>
+
 
 
 <% end %>

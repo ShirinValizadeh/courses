@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   
 
   
-  resources :course_ratings
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   
   resources :tasks
@@ -41,7 +40,9 @@ Rails.application.routes.draw do
     resources :enrollments, only: [:create]
  end
  resources :postings, only: %i[index ] 
+ 
   resources :finished_courses, only: %i[show ] 
+  resources :course_ratings
 
 
   get "password/reset", to: "password_resets#new"
