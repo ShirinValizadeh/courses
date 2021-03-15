@@ -1,5 +1,5 @@
 class CourseRatingsController < ApplicationController
-  before_action :set_course_rating, only: %i[ show edit update destroy ]
+  before_action :set_course_rating, only: %i[ show edit update ]
   before_action :set_course
 
 
@@ -40,14 +40,7 @@ class CourseRatingsController < ApplicationController
     end
   end
 
-  # DELETE /course_ratings/1 or /course_ratings/1.json
-  def destroy
-    @course_rating.destroy
-    respond_to do |format|
-    redirect_to course_ratings_url, notice: "Course rating was successfully destroyed." 
 
-    end
-  end
 
   private
 
