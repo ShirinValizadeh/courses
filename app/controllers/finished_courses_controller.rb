@@ -13,7 +13,7 @@ class FinishedCoursesController < ApplicationController
   private
 
   def set_course_rating
-    @course_rating = CourseRating.find(params[:id])
+    @course_rating = @course.course_ratings.new
   end
 
 

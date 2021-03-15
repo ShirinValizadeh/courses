@@ -11,16 +11,9 @@
     </div>
 
 
+  
   <div class="card-body">
-     <div class="mb-2">
-        <div class="field form-group">
-            <%= form.label :Course %> :
-            <%= form.collection_select :course_id, Course.order(:title), :id, :title  , class:"p-2"   %>
-        </div>
-      </div>
-  </div>
-
-  <div class="card-body">
+    <%= form.hidden_field :course_id, value: @course.id%>
       <div class="mb-2">
         <div class="field form-group">
                 <%= form.label :rating %> :
