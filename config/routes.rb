@@ -5,7 +5,9 @@ Rails.application.routes.draw do
 
   
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
-  
+  resource :about
+  resource :contact
+  resources :my_tasks
   resources :tasks
   devise_for :users
 
@@ -44,6 +46,8 @@ Rails.application.routes.draw do
   resources :finished_courses, only: %i[show ] 
   resources :course_ratings
 
+  # config/routes.rb
+ # get '/:locale' => 'dashboard#index'
 
   get "password/reset", to: "password_resets#new"
   post "password/reset", to: "password_resets#create"
@@ -51,9 +55,7 @@ Rails.application.routes.draw do
   patch "password/reset/edit", to: "password_resets#update"
   
   #get 'about', to: 'about#index'
-  resource :about
-  resource :contact
-  resources :my_tasks
+
   
   root 'home#index'
   # get 'home/index'

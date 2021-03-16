@@ -49,4 +49,8 @@ class Course < ApplicationRecord
   def average_rating
     course_ratings.all.average(:rating).to_i    
   end
+
+  def average_rating_empty
+  5 -   course_ratings.all.average(:rating).to_i  
+  end
 end
