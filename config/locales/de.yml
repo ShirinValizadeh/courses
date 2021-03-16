@@ -1,2 +1,10 @@
 de: 
-  hello: "hallo Welt"
+  home:
+    header:
+      home: Home
+      about-us: Über Uns
+      contact-form: Kontaktform
+      courses:  Kurse
+      sign-up:  Anmelden
+      sign-in:  Login
+      search: Suchen  
