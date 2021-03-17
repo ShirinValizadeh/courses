@@ -30,13 +30,24 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  willkommen: "welcome , %{email}"
   general:
-    headings:
-      home: Home
-      about-us: About Us
-      contact-form: Contact-Form
-      courses:  Courses
-      sign-up:  Sign Up
-      sign-in:  Sign In 
-      search:   Search 
+    nav:
+      home: "Home"
+      about-us: "About Us"
+      contact-form: "Contact-Form"
+      courses:  "Courses"
+      sign-up: " Sign Up"
+      sign-in:  "Sign In" 
+      search:   "Search" 
+    forms:  
+      messages:
+        errors:
+          one: "one errors prohibited this feedback"
+          other: " errors prohibited this feedback %{count}"
+    submit: "submit"    
+
+  time:
+    formats:
+      short: "arrrround %H'ish" 
+
+  willkommen_html: "<b>welcome!</b> %{email} "

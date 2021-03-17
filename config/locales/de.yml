@@ -1,21 +1,32 @@
 de: 
-  willkommen: "herzlich willkomen , %{email}"
+  activerecord:
+    attributes:
+      author:
+          title: "Titel" 
+          description: "Beschreibung" 
   general:
-    headings:
-      home: Home
-      about-us: Über Uns
+    nav:
+      home: "Home"
       contact-form: Kontaktform
-      courses:  Kurse
-      sign-up:  Anmelden
-      sign-in:  Login
-      search: Suchen  
+      courses:  "Kurse"
+      sign-up:  "Anmelden"
+      sign-in:  "Login"
+      search: "Suchen" 
+      task: "Aufgabe"
+      my-tasks: "Meine Aufgabe"
+      auhthore-courses: "Authore Kurse"
+      edit-profile: "Profil Bearbeiten"
     forms:  
       messages:
         errors:
-          one: "one errors prohibited this feedback"
-          other: " errors prohibited this feedback %{count}"
+          one: "Ein Fehler verbot dieses Feedback"
+          other: " %{count} Fehler haben dieses Feedback verboten"
+      submit: "Einreichen"    
+  
+
   time:
     formats:
-      short: "arrrround %H'ish"
+      short: "Time: %H'ish"
 
 
+  willkommen_html: "<b>herzlich willkomen ! </b>%{email} "
