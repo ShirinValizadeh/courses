@@ -10,7 +10,7 @@ class Course < ApplicationRecord
   has_rich_text :body
 
   validates :title, presence: true
-  validates :description, length: { maximum: 200 }
+  validates :description,presence: true ,length: { maximum: 200 }
  # validates :publish, presence: false
 
   delegate :count, to: :lessons, prefix: true

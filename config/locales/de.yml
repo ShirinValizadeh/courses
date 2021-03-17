@@ -1,6 +1,7 @@
 de: 
-  home:
-    header:
+  willkommen: "herzlich willkomen , %{email}"
+  general:
+    headings:
       home: Home
       about-us: Über Uns
       contact-form: Kontaktform
@@ -8,3 +9,13 @@ de:
       sign-up:  Anmelden
       sign-in:  Login
       search: Suchen  
+    forms:  
+      messages:
+        errors:
+          one: "one errors prohibited this feedback"
+          other: " errors prohibited this feedback %{count}"
+  time:
+    formats:
+      short: "arrrround %H'ish"
+
+
