@@ -18,7 +18,7 @@ module Api
             render json: {status: 'SUCCESS' , message:'Saved posting',data:posting},status: :ok
             else    
             render json: {status: 'ERROR' , message:'posting not saved',data:posting.errors},status: :unprocessable_entity
-
+            end
         end
 
 
@@ -36,12 +36,13 @@ module Api
             else    
             render json: {status: 'ERROR' , message:'posting not updated',data:posting.errors},status: :unprocessable_entity
         end
+    end
 
-        
         private
 
         def posting_params
             params.permit(:title , :description)
         end
+        
     end
 end
