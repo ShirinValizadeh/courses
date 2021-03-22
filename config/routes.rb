@@ -2,7 +2,9 @@
 
 Rails.application.routes.draw do
   
-
+namespace 'api' do
+  resources :postings
+end
   
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   resource :about
