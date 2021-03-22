@@ -1,48 +1,61 @@
 module Api
-    class PostingsController < ApplicationController
+    #module Admin
+
+    class PostingsController <  ApplicationController
+        skip_before_action :authenticate_user!
+        before_action :set_posting, only: %i[show edit update create]
+        respond_to :json
+
         def index
-            postings = Posting.order('created_at DESC')
-            render json: {status: 'SUCCESS' , message:'Loaded postings',data:postings},status: :ok
+            #postings = Posting.order('created_at DESC')
+            @postings = Posting.all
         end
 
         def show
-            posting = Posting.find(params[:id])
-            render json: {status: 'SUCCESS' , message:'Loaded posting',data:posting},status: :ok
-            
+            render :show
+                
         end
 
-        def creat
+
+        def create
             posting = Posting.new(posting_params)
 
-            if posting.save
-            render json: {status: 'SUCCESS' , message:'Saved posting',data:posting},status: :ok
+        if posting.save
+            render :show
             else    
-            render json: {status: 'ERROR' , message:'posting not saved',data:posting.errors},status: :unprocessable_entity
+            render json: @posting.errors, status: :unprocessable_entity
+            
             end
         end
 
 
         def destroy
-            posting = Posting.find(params[:id])
             posting.destroy
-            render json: {status: 'SUCCESS' , message:'DELETED posting',data:posting},status: :ok
+            head :no_content
 
         end
 
         def update
-            posting = Posting.find(params[:id])
             if posting.update_attributes(posting_params)
-            render json: {status: 'SUCCESS' , message:'Updated posting',data:posting},status: :ok
+            render :show
             else    
-            render json: {status: 'ERROR' , message:'posting not updated',data:posting.errors},status: :unprocessable_entity
+            render json: @posting.errors, status: :unprocessable_entity
+            end
         end
-    end
 
         private
+
+        def set_posting
+                @posting = Posting.find(params[:id])
+        end
 
         def posting_params
             params.permit(:title , :description)
         end
-        
+            
     end
+
+
+   # end
+
 end
