@@ -31,7 +31,7 @@
             <%#Published: <%= course.published  %>    
              <%= render 'courses/course_rating' , course: course%>
               
-             <%= tag.time course.created_at, datatime: course.created_at%>
+             <%=l(course.created_at, format: :short)%>
            
             
         </div>   

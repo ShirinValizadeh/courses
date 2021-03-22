@@ -30,6 +30,35 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+#Active Record Models#
+  activerecord:
+    models:
+      author: Author
+      user: user
+      course: course
+      lesson: lesson
+    attributes:
+      author:
+        email: E-Mail
+        password: Passwort
+      course:
+        title: Title 
+        description: Description 
+        published: Published
+        image: Imge
+        body: Body
+      lesson: 
+        title: Title 
+        description: Description 
+        published: Published
+        image: Imge
+        body: Body 
+     
+  # Action Mailer E-Mail Subjects#        
+  user_mailer:
+    welcome_email:
+      subject: "Confirm email for %{email}!"  
+  #general#              
   general:
     nav:
       home: "Home"
@@ -39,15 +68,73 @@ en:
       sign-up: " Sign Up"
       sign-in:  "Sign In" 
       search:   "Search" 
+  # Pluralization#    
     forms:  
       messages:
         errors:
           one: "one errors prohibited this feedback"
           other: " errors prohibited this feedback %{count}"
     submit: "submit"    
-
-  time:
+  #Date/Time Formats#
+  date:
+    abbr_day_names:
+    - Sun
+    - Mon
+    - Tue
+    - Wed
+    - Thu
+    - Fri
+    - Sat
+    abbr_month_names:
+    - 
+    - Jan
+    - Feb
+    - Mar
+    - Apr
+    - May
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Oct
+    - Nov
+    - Dec
+    day_names:
+    - Sunday
+    - Monday
+    - Tuesday
+    - Wednesday
+    - Thursday
+    - Friday
+    - Saturday
     formats:
-      short: "arrrround %H'ish" 
-
+      default: "%Y-%m-%d"
+      long: "%B %d, %Y"
+      short: "%b %d"
+    month_names:
+    - 
+    - January
+    - February
+    - March
+    - April
+    - May
+    - June
+    - July
+    - August
+    - September
+    - October
+    - November
+    - December
+    order:
+    - :year
+    - :month
+    - :day
+  time:
+    am: am
+    formats:
+      default: "%a, %d %b %Y %H:%M:%S %z"
+      long: "%B %d, %Y %H:%M"
+      short: "%d %b %H:%M"
+    pm: pm 
+  #HTML Translations#
   willkommen_html: "<b>welcome!</b> %{email} "

@@ -1,9 +1,32 @@
 de: 
+#Active Record Models#
   activerecord:
+    models:
+      author: Author
+      user: Benutzer
+      course: Fortbildung
+      lesson: Lektion
     attributes:
-      author:
-          title: "Titel" 
-          description: "Beschreibung" 
+        author:
+          email: E-Mail
+          password: Passwort
+        course:
+          title: Titel 
+          description: Beschreibung 
+          published: Veröffentlicht
+          image: Bild
+          body: Körper
+        lesson:
+          title: Titel 
+          description: Beschreibung 
+          published: Veröffentlicht
+          image: Bild
+          body: Körper
+  # Action Mailer E-Mail Subjects#        
+  user_mailer:
+    welcome_email:
+      subject: "E-Mail bestätigen für %{email}!"   
+  #general#              
   general:
     nav:
       home: "Home"
@@ -16,6 +39,7 @@ de:
       my-tasks: "Meine Aufgabe"
       auhthore-courses: "Authore Kurse"
       edit-profile: "Profil Bearbeiten"
+  # Pluralization#    
     forms:  
       messages:
         errors:
@@ -23,10 +47,67 @@ de:
           other: " %{count} Fehler haben dieses Feedback verboten"
       submit: "Einreichen"    
   
-
-  time:
+  #Date/Time Formats#
+  date:
+    abbr_day_names:
+    - So
+    - Mo
+    - Di
+    - Mi
+    - Do
+    - Fr
+    - Sa
+    abbr_month_names:
+    -
+    - Jan
+    - Feb
+    - Mär
+    - Apr
+    - Mai
+    - Jun
+    - Jul
+    - Aug
+    - Sep
+    - Okt
+    - Nov
+    - Dez
+    day_names:
+    - Sonntag
+    - Montag
+    - Dienstag
+    - Mittwoch
+    - Donnerstag
+    - Freitag
+    - Samstag
     formats:
-      short: "Time: %H'ish"
+      default: "%d.%m.%Y"
+      long: "%e. %B %Y"
+      short: "%e. %b"
+    month_names:
+    -
+    - Januar
+    - Februar
+    - März
+    - April
+    - Mai
+    - Juni
+    - Juli
+    - August
+    - September
+    - Oktober
+    - November
+    - Dezember
+    order:
+    - :day
+    - :month
+    - :year
+  time:
+    am: vormittags
+    formats:
+      default: "%A, %d. %B %Y, %H:%M Uhr"
+      long: "%A, %d. %B %Y, %H:%M Uhr"
+      short: "%d. %B, %H:%M"
+    pm: nachmittags
 
-
+  #HTML Translations#
   willkommen_html: "<b>herzlich willkomen ! </b>%{email} "
