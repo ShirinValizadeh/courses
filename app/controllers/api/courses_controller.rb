@@ -1,14 +1,13 @@
 module Api
-    class CoursesController <  ApplicationController
-        respond_to :json
+  class CoursesController < BaseController
+    respond_to :json
 
-        def index
-            @courses = Course.all
-        end
+    def index
+      @courses = Course.all
+    end
 
-        def show
-            render :show                
-        end
-        
-    end    
-end    
+    def show
+      render :show
+    end
+  end
+end
