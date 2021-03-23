@@ -16,13 +16,10 @@ module Api
 
     def create
       @posting = Posting.new(posting_params)
-
       if @posting.save
-
         render :show
       else
         render json: @posting.errors, status: :unprocessable_entity
-
       end
     end
 

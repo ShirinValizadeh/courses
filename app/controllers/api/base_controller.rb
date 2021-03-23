@@ -6,13 +6,13 @@ module Api
     private
 
     def authenticate
-      p '======='
-      p request.headers
+      # p '======='
+      # p request.headers
       authenticate_or_request_with_http_token do |token, _options|
-        p '>>>>>'
-        p token
-        p _options
-        p User.find_by(api_token: token)
+        # p '>>>>>'
+        # p token
+        # p _options
+        # p User.find_by(api_token: token)
         User.find_by(api_token: token)
       end
     end
