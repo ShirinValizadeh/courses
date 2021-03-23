@@ -2,9 +2,11 @@ module Api
     #module Admin
 
     class PostingsController <  ApplicationController
-        skip_before_action :authenticate_user!
-        before_action :set_posting, only: %i[show edit update create]
+        
+        before_action :set_posting, only: %i[show edit update] 
         respond_to :json
+        skip_before_action :verify_authenticity_token
+
 
         def index
             #postings = Posting.order('created_at DESC')
@@ -17,10 +19,13 @@ module Api
         end
 
 
-        def create
-            posting = Posting.new(posting_params)
 
-        if posting.save
+        def create
+           
+            @posting = Posting.new(posting_params)
+            
+        if @posting.save
+            
             render :show
             else    
             render json: @posting.errors, status: :unprocessable_entity
@@ -30,13 +35,13 @@ module Api
 
 
         def destroy
-            posting.destroy
+            @posting.destroy
             head :no_content
 
         end
 
         def update
-            if posting.update_attributes(posting_params)
+            if @posting.update_attributes(posting_params)
             render :show
             else    
             render json: @posting.errors, status: :unprocessable_entity
