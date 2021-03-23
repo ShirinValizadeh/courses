@@ -2,7 +2,7 @@ module Api
   # module Admin
 
   class PostingsController < BaseController
-    before_action :set_posting, only: %i[show edit update]
+    before_action :set_posting, only: %i[show edit update destroy]
     respond_to :json
 
     def index
@@ -32,7 +32,7 @@ module Api
     end
 
     def update
-      if @posting.update_attributes(posting_params)
+      if @posting.update(posting_params)
         render :show
       else
         render json: @posting.errors, status: :unprocessable_entity
