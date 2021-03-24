@@ -39,11 +39,11 @@ class Api::PostingsControllerTest < ActionDispatch::IntegrationTest
         end
     end
 
-    test "should update posting" do
-        patch api_posting_url(@posting.id), params: { posting: { description: description, title: "new title" } }
-        assert_response :success
-        json = JSON.parse response.body
-        assert_equal [], json["body"]["blocks"]
-        assert_equal "new title", json["title"]
-      end
+    # test "should update posting" do
+    #     patch api_posting_url(@posting.id), params: { posting: { description: description, title: "new title" } }
+    #     assert_response :success
+    #     json = JSON.parse response.body
+    #     assert_equal [], json["body"]["blocks"]
+    #     assert_equal "new title", json["title"]
+    #   end
 end    
