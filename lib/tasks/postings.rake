@@ -8,7 +8,7 @@ namespace :postings do
       end
     end
   end
-  
+
   # https://github.com/jnunemaker/httparty
   # https://www.rubydoc.info/github/jnunemaker/httparty
   # https://stackoverflow.com/questions/tagged/httparty
@@ -16,7 +16,7 @@ namespace :postings do
   namespace :api do
     task :postings do
       puts "Rake api:postings starting..."
-      response = HTTParty.get("http://localhost:3000/postings",
+      response = HTTParty.get("http://localhost:3000/api/postings",
         headers: {
           Authorization: "Bearer abc123",
           "Content-Type" => "application/json"
