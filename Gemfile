@@ -18,7 +18,7 @@ gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
 gem 'image_processing'
 gem "font-awesome-rails"
-
+gem "httparty", "~> 0.18.1"
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
