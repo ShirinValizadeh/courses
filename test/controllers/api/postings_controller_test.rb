@@ -21,10 +21,13 @@ class Api::PostingsControllerTest < ActionDispatch::IntegrationTest
       
     test "should create posting" do  
         assert_difference('Posting.count') do  
+         
           post api_postings_url,headers:{Authorization: "Bearer abc123" },
-                params: { posting: { description: @posting.description, 
+                params: { posting: { body: @posting.body, 
                         title: @posting.title } }
-                end   
+                    
+               end  
+          
         assert_response :success
        end
 
@@ -37,7 +40,7 @@ class Api::PostingsControllerTest < ActionDispatch::IntegrationTest
     end
 
     test "should update posting" do
-        patch api_posting_url(@posting.id),headers:{Authorization: "Bearer abc123" }, params: { posting: { description: @posting.description, title: @posting.title } }
+        patch api_posting_url(@posting.id),headers:{Authorization: "Bearer abc123" }, params: { posting: { body: @posting.body, title: @posting.title } }
         assert_response :success
 
       end

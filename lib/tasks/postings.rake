@@ -4,14 +4,24 @@ namespace :postings do
     task titles: :environment do
       Rails.logger.info "Rake postings:titles starting..."
       Posting.all.each do |posting|
-        puts posting.title
-      end
+        puts posting.titles
+      
+      end     
+    end
+
+    task body: :environment do
+      Rails.logger.info "Rake postings:body starting..."
+      Posting.all.each do |posting|
+        puts posting.body
+      
+      end     
     end
   end
 
   # https://github.com/jnunemaker/httparty
   # https://www.rubydoc.info/github/jnunemaker/httparty
   # https://stackoverflow.com/questions/tagged/httparty
+
   require "httparty"
   namespace :api do
     task :postings do
@@ -22,6 +32,11 @@ namespace :postings do
           "Content-Type" => "application/json"
         }
       )
-      p response
+     # p response
+     #puts response.body, response.code, response.message, response.headers.inspect
+
+ 
     end
   end
+
+
