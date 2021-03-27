@@ -5,8 +5,17 @@ Rails.application.routes.draw do
 namespace :api, constraints: { format: "json" }, defaults: { format: "json" } do
    resources :postings , only: [:create, :index, :show , :destroy , :update]
    # resources :courses
+
+   resources :courses 
+
 end
+
   
+  
+
+
+
+
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   resource :about
   resource :contact

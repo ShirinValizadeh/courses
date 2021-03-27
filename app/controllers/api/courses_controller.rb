@@ -1,13 +1,26 @@
 module Api
-  class CoursesController < BaseController
+  class CoursesController < ApplicationController
     respond_to :json
+    before_action :set_course, only: %i[show edit update destroy]
+ 
+
 
     def index
       @courses = Course.all
     end
 
-    def show
-      render :show
-    end
+
+
+  private
+
+  def set_course
+    @course = Course.find(params[:id])
+  end
+
+  def course_params
+    params.require(:course).permit(:title, :body, :description ,:published , :image)
+  end
+
+
   end
 end
