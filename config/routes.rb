@@ -53,7 +53,9 @@ end
 
     resources :enrollments, only: [:create]
  end
- resources :postings, only: %i[index ] 
+ resources :postings do 
+  resources :comments , module: :postings
+end
  
   resources :finished_courses, only: %i[show ] 
   resources :course_ratings

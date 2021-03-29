@@ -63,8 +63,10 @@
 
           <h5 > <%= posting.title  %> </h5>
             <%= posting.description %>
-
           </div>
+            <%= render partial: "comments/comments" , locals:{commentable: posting}%>
+            <%= render partial: "comments/form" , locals:{commentable: posting}%>
+ 
           <% end %> 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
