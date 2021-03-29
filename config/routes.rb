@@ -44,18 +44,16 @@ end
   # /courses
   # /courses/:id
   resources :courses, only: %i[index show] do
-  resources :content_lessons, only: %i[show ]
-
-   resource :teacher, only: %i[show ]
-
+    resources :comments , module: :courses
+    resources :content_lessons, only: %i[show ]
+    resource :teacher, only: %i[show ]
     resources :completedlessons    
     resources :lessons, only: %i[index show]
-
     resources :enrollments, only: [:create]
  end
- resources :postings do 
-  resources :comments , module: :postings
-end
+ resources :postings 
+
+
  
   resources :finished_courses, only: %i[show ] 
   resources :course_ratings

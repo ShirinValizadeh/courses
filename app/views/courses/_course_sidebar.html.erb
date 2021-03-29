@@ -38,9 +38,10 @@
           </td>
         </tr>
        
-    
-    </table>
 
+    </table>
+            <%= render partial: "comments/comment" , locals:{commentable: @course}%>
+            <%= render partial: "comments/form" , locals:{commentable: @course}%>
     <% else %>
     <%= form_with(url: course_enrollments_path(@course)) do |form| %>
     <%= form.submit "Enroll", class:"btn btn-success shadow-lg " %>

@@ -1,9 +1,9 @@
-class CommentsController < ApplicationControler
-    before_action :authentication_user
+class CommentsController < ApplicationController
+   # before_action :authentication_user
 
     def create
-        @comment = @commentable.comments.new comment_params
-        @comment.user = current_user
+        @comment = @commentable.comments.new(comment_params)
+        @comment.user_id = current_user
         @comment.save
         redirect_to @commentable, notice:"your camment was successfully"
         

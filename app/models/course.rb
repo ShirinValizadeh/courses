@@ -8,6 +8,7 @@ class Course < ApplicationRecord
   has_one_attached :image
 
   has_rich_text :body
+  has_many :comments, as: :commentable
 
   validates :title, presence: true
   validates :description,presence: true ,length: { maximum: 100 }
