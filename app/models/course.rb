@@ -9,6 +9,7 @@ class Course < ApplicationRecord
 
   has_rich_text :body
   has_many :comments, as: :commentable
+  has_many :reactions, as: :reactionable
 
   validates :title, presence: true
   validates :description,presence: true ,length: { maximum: 100 }

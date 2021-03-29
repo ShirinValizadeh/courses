@@ -45,6 +45,7 @@ end
   # /courses/:id
   resources :courses, only: %i[index show] do
     resources :comments , module: :courses
+    resources :reactions , module: :courses
     resources :content_lessons, only: %i[show ]
     resource :teacher, only: %i[show ]
     resources :completedlessons    

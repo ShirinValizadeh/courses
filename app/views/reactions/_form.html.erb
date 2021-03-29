@@ -1,0 +1,7 @@
+<%= form_for [reactionable, Reaction.new] do |f| %>
+
+    <div class="form-group">
+        <%= f.number_field :reaction ,placeholder:"(1-5)" %>     
+    </div>
+    <%= f.submit "add" class: "btn btn-sm bg-success"%>
+<%end%>    
