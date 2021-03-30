@@ -1,7 +1,8 @@
 class ReactionsController < ApplicationController
     
     def create
-        @reaction = @reactionable.reactionss.new(reaction_params)
+        puts @reactionable
+        @reaction = @reactionable.reactions.new(reaction_params)
         @reaction.user_id = current_user
         @reaction.save
         redirect_to @reactionable, notice:"your reaction was successfully"
@@ -11,6 +12,6 @@ class ReactionsController < ApplicationController
     private
 
     def reaction_params
-        params.require(:reactin).permit(:reaction)
+        params.require(:reaction).permit(:reaction)
     end
 end

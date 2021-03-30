@@ -44,7 +44,7 @@
             <%= render partial: "comments/form" , locals:{commentable: @course}%>
 
             <%= render partial: "reactions/reaction" , locals:{reactionable: @course}%>
-            <%= render partial: "reactions/reaction" , locals:{reactionable: @course}%>
+            <%= render partial: "reactions/form" , locals:{reactionable: @course}%>
     <% else %>
     <%= form_with(url: course_enrollments_path(@course)) do |form| %>
     <%= form.submit "Enroll", class:"btn btn-success shadow-lg " %>
