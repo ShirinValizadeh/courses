@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  
+mount Blazer::Engine, at: "blazer"
+
 
 namespace :api, constraints: { format: "json" }, defaults: { format: "json" } do
    resources :postings , only: [:create, :index, :show , :destroy , :update]

@@ -61,3 +61,6 @@ gem 'inky-rb', require: 'inky'
 # Stylesheet inlining for email
 gem 'premailer-rails'
  gem "aws-sdk-s3", require: false
+
+gem "ahoy_matey", "~> 3.1.0"
+gem 'blazer'
