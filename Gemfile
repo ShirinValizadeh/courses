@@ -64,3 +64,6 @@ gem 'premailer-rails'
 
 gem "ahoy_matey", "~> 3.1.0"
 gem 'blazer'
+
+gem 'chartkick'
+gem 'groupdate'

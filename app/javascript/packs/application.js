@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 
-
+require("chartkick/chart.js")
 import ahoy from "ahoy.js";
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"

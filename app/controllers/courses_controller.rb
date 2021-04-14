@@ -9,12 +9,15 @@ class CoursesController < ApplicationController
   # GET /courses.json
   def index
     @courses = Course.all
-
+    respond_to do |format|
+      format.html
+    end
   end
 
   # GET /courses/1
   # GET /courses/1.json
   def show; end
+
 
 
 

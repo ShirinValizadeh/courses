@@ -135,6 +135,8 @@ GEM
     geocoder (1.6.6)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    groupdate (5.2.1)
+      activesupport (>= 5)
     htmlentities (4.3.4)
     httparty (0.18.1)
       mime-types (~> 3.0)
@@ -366,11 +368,13 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
+  chartkick
   devise (~> 4.7, >= 4.7.3)
   factory_bot_rails
   faker
   font-awesome-rails
   foundation_emails
+  groupdate
   httparty (~> 0.18.1)
   image_processing
   inky-rb
