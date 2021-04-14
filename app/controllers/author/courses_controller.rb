@@ -11,6 +11,7 @@ module Author
     # GET /courses.json
     def index
       @courses = Course.all
+      @chart_data = Course.chart_data
     end
 
     # GET /courses/1

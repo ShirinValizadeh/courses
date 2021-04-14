@@ -34,4 +34,4 @@
 
 <%= link_to 'New Course', new_author_course_path , class:"btn btn-dark"%>
 
-<%= line_chart Course.group_by_day(:created_at).count %>
+<%= line_chart @chart_data %>

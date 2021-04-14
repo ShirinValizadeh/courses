@@ -17,6 +17,10 @@ class Course < ApplicationRecord
 
   delegate :count, to: :lessons, prefix: true
 
+  def self.chart_data
+    Course.group_by_day(:created_at).count
+  end
+
   def enrolled?(current_user)
     coursenrollments.find_by(user: current_user)
   end
